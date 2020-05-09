@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		xmlns="http://maven.apache.org/POM/4.0.0"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	
+<!-- ====================================================================== -->
+<!-- PARENT                                                                 -->
+<!-- ====================================================================== -->
+	<parent>
+		<groupId>appmt</groupId>
+		<artifactId>appmt01</artifactId>
+		<version>${revision}</version>
+	</parent>
+  	
+<!-- ====================================================================== -->
+<!-- ARTIFACT                                                               -->
+<!-- ====================================================================== -->
+	<name>appmt01UIWebContent</name>
+  	<artifactId>appmt01UIWebContent</artifactId>
+  	<packaging>pom</packaging>
+
+<!-- ====================================================================== -->
+<!-- DEPENDENCIES                                                           -->
+<!-- ====================================================================== -->
+	<dependencies>
+		<!-- ///////////////////////////////////////// -->
+		<!-- APPMNT: WebApp common                     -->
+		<!-- ///////////////////////////////////////// -->
+		<!--
+		Since the [appointment] apps might be splitted by [tenant] in a near future (ie: [appmt01UIWar], [appmt02UIWar], etc)
+		the COMMON web-app code is located in two projects:
+			- [appmt00UIClasses]	> contains common java code > included as a 'normal' jar dependency
+			- [appmt00UIWar] 		> contains common JSP code  > overlayed as war (see http://maven.apache.org/plugins/maven-war-plugin/overlays.html)
+		-->
+		<dependency>
+			<groupId>appmt.appmt00.ui</groupId>
+			<artifactId>appmt00UIWebContent</artifactId>
+			<version>${appmt.common.version}</version>
+			<type>war</type>		<!-- BEWARE! it's an overlayed war (see also [maven-war-plugin] config below) -->
+		</dependency>
+	</dependencies>
+
+<!-- ====================================================================== -->
+<!-- BUILD                                                                  -->
+<!-- ====================================================================== -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!--
+				ECLIPSE (see main pom.xml for further info) ===================
+				This plugin has NO effects in maven build:
+					m2e ONLY runs some 'standard' goals of the maven pom.xml since the aim of m2e is NOT to be a complete CI tool
+					... in order to include 'non-standard' goals in m2e execution and avoid [plugin execution not covered by the eclipse m2e plugin project build lifecycle mapping]
+						the 'non-standard' plugin MUST be explicitly included in m2e execution
+				-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<!-- flatten plugin -->
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>flatten-maven-plugin</artifactId>
+										<versionRange>[1.1.0,)</versionRange>
+										<goals>
+											<goal>flatten</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<!-- War plugin (see overlays) -->
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+

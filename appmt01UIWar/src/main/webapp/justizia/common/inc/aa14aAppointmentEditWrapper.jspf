@@ -1,0 +1,17 @@
+<!-- Called when editing an appointment clicking at the calendar -->
+
+
+
+<!-- Common appointment edit -->
+<%@include file="/aa14aAppointmentEditHeader.jspf"%>
+
+<!-- appointment details -->
+<%@include file="/justizia/common/inc/aa14aAppointmentDetails.jspf"%>
+
+<!-- Customer details -->
+<div id="aa14a_customer_details" class="aa14a_bloque ocultar">
+<%@include file="/justizia/common/inc/aa14aSolicitudForm.jspf"%>
+</div>
+
+<!-- Common appointment edit -->
+<%@include file="/aa14aAppointmentEditFooter.jspf"%>

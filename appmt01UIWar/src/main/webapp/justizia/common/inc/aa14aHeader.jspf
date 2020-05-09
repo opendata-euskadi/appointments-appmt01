@@ -1,0 +1,6 @@
+	<header class="aa14a_cabecera">
+		<h1><fmt:message key="justizia.titulo"/></h1>
+	</header>
+	
+	<!-- Server error dialog -->
+	<%@include file="/aa14aServerErrorDialog.jspf"%>

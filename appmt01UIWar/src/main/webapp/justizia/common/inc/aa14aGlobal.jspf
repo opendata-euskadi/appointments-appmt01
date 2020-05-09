@@ -1,0 +1,34 @@
+<%@ page pageEncoding="UTF-8" %>
+
+<%@page import="java.util.Map"%>
+<%@page import="com.google.api.client.util.Maps"%>
+<%@page import="aa14f.client.api.AA14ClientAPI" %>
+<%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID"%>
+<%@page import="aa14f.model.config.AA14Schedule" %>
+<%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID" %>
+<%@page import="aa14a.ui.servlet.AA14XLNetsAuthCtxForJustizia"%>
+<%@page import="aa14f.model.config.business.AA14BusinessConfigForJustizia"%>
+
+
+<%@include file="/aa14aGlobal.jspf"%>
+<%
+	// If XLNets auth is present set tha auth status
+	AA14XLNetsAuthCtxForJustizia xlnetsAuthCtx = new AA14XLNetsAuthCtxForJustizia(request);
+	if (xlnetsAuthCtx != null) {	
+		// the user is authenticated
+		authenticated = xlnetsAuthCtx.isAuthenticated();
+		hasScheduleAccess = xlnetsAuthCtx.hasScheduleAccess();
+	}
+	
+	// schedule configs
+	Map<AA14ScheduleID,AA14Schedule> schedulesById = api.configAPI()
+														 .getForJustizia()
+    													 .getSchedulesById();
+%>
+
+
+
+
+
+
+
