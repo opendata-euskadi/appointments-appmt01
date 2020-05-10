@@ -1,0 +1,42 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="trafikoa.inicio.calendar.instrucciones"/></p>
+	
+	<%
+	System.out.println("Favourite schedule: " + securityAuthCtx.getFavoriteSheduleId());
+	System.out.println(" Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	%>
+	
+	<div>
+		<%-- ARABA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForTrafikoa.SCH_GASTEIZ_ID)) { %>
+		<input name="schId" value="SCH_EJGV_SEGURIDAD_TRAFIKOA_GASTEIZ" 
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForTrafikoa.SCH_GASTEIZ_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.araba"/>
+		<% } %>
+
+		<%-- BIZKAIA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForTrafikoa.SCH_BILBAO_ID)) { %>			   
+		<input name="schId" value="SCH_EJGV_SEGURIDAD_TRAFIKOA_BILBAO" 
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForTrafikoa.SCH_BILBAO_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.bizkaia"/>
+		<% } %>
+		
+		<%-- GUIPUZKOA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForTrafikoa.SCH_DONOSTIA_ID)) { %>
+		<input name="schId" value="SCH_EJGV_SEGURIDAD_TRAFIKOA_DONOSTIA" 
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForTrafikoa.SCH_DONOSTIA_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.gipuzkoa"/>
+		<% } %>
+		
+		<%-- CATIT --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForTrafikoa.SCH_BILBAO_CATIT_ID)) { %>
+		<input name="schId" value="SCH_EJGV_SEGURIDAD_TRAFIKOA_BILBAO_CATIT" 
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForTrafikoa.SCH_BILBAO_CATIT_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="trafikoa.location.catit.prov"/>
+		<% } %>
+	</div>
+</div>

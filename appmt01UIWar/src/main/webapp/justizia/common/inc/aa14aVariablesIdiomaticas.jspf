@@ -10,10 +10,10 @@ var msgLocatorRequiredError = "<fmt:message key='justizia.busqueda.error.localiz
 var maxNumberOfApointmetsExceededMsg = "<fmt:message key='justizia.solicitud.error.maximo.semana'/>";
 
 // Literales para el perfil
-var PERFIL_ABOGADO = "<fmt:message key='justizia.datospersonales.perfil.abogado'/>";
-var PERFIL_PROCURADOR = "<fmt:message key='justizia.datospersonales.perfil.procurador'/>";
-var PERFIL_CIUDADANIA = "<fmt:message key='justizia.datospersonales.perfil.ciudadania'/>";
-var PERFIL_GRADUADO = "<fmt:message key='justizia.datospersonales.perfil.graduadoSocial'/>";
-var PERFIL_OTRO = "<fmt:message key='justizia.datospersonales.perfil.otro'/>";
+var ABOGADO = "<fmt:message key='justizia.datospersonales.perfil.abogado'/>";
+var PROCURADOR = "<fmt:message key='justizia.datospersonales.perfil.procurador'/>";
+var CIUDADANIA = "<fmt:message key='justizia.datospersonales.perfil.ciudadania'/>";
+var GRADUADO_SOCIAL = "<fmt:message key='justizia.datospersonales.perfil.graduadoSocial'/>";
+var OTRO = "<fmt:message key='justizia.datospersonales.perfil.otro'/>";
 
 </script>

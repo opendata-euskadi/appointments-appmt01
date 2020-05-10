@@ -302,12 +302,12 @@ public class AA14ConfigBuilderForZuzenean
 		outCfg.setEmailTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/email/zuzenean/AA14MailTemplateForZuzenean.vm"));
 		
 		// sms templates
-		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForZuzenean.vm"));
-		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForZuzenean.vm"));
-		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingDeleteTemplateForZuzenean.vm"));
-		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForZuzenean.vm"));
-		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForZuzenean.vm"));
-		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForZuzenean.vm"));	
+		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/zuzenean/AA14MessagingTemplateForZuzenean.vm"));
+		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/zuzenean/AA14MessagingTemplateForZuzenean.vm"));
+		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/zuzenean/AA14MessagingDeleteTemplateForZuzenean.vm"));
+		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/zuzenean/AA14MessagingTemplateForZuzenean.vm"));
+		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/zuzenean/AA14MessagingTemplateForZuzenean.vm"));
+		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/zuzenean/AA14MessagingTemplateForZuzenean.vm"));	
 		
 		// template model data
 		AA14NotificationMessageDataBuilderForZuzenean messageDataBuider = new AA14NotificationMessageDataBuilderForZuzenean();

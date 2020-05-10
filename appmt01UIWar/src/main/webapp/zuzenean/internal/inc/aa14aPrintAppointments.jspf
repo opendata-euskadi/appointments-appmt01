@@ -1,0 +1,50 @@
+<form id='aa14a_print_appointments_form' class='aa14a_print_appointments'
+	  action='/aa14aUIWar/AA14CalendarPrintServlet?R01HNoPortal=true'>
+	  
+	<input type="hidden" name="lang" value="<%=langCode%>" />
+	
+	<%@include file="/zuzenean/common/inc/aa14aLocationSelect.jspf"%>
+	
+	<div class='aa14a_left_float'>
+		<% if (lang == Language.SPANISH) { %>
+		
+		<label for="print_start_date"><fmt:message key="comun.desde" /></label>
+		<input name="print_start_date" class="aa14a_input" value="">
+		
+		<label for="print_end_date"><fmt:message key="comun.hasta" /></label>
+		<input name="print_end_date" class="aa14a_input" value="">
+		
+		<% } else if (lang == Language.BASQUE) { %>
+		
+		<input name="print_start_date" class="aa14a_input" value="">
+		<label for="print_start_date"><fmt:message key="comun.desde" /></label>
+		
+		<input name="print_end_date" class="aa14a_input" value="">
+		<label for="print_end_date"><fmt:message key="comun.hasta" /></label>
+		
+		<% } %>
+		
+		<p id="aa14a_print_appointments_form_errors" class="aa14a_warning ocultar">
+			<span class="fa fa-asterisk"></span>
+			<fmt:message key="comun.solicitud.location.errores.servicio" />
+		</p>
+	</div>
+		
+	<!-- Button bar -->
+	<div class='aa14_button_bar'>
+		<!-- aceptar -->
+		<div id="aa14a_do_print_appointments_btn" class="aa14a_btn_anterior_siguiente">
+			<a><div id="aa14a_nonBookableSave" class="aa14a_boton aa14a_boton_right">
+					<p><span class="fa fa-print"></span><fmt:message key="comun.imprimir" /></p>
+			   </div>
+			</a>					
+		</div>
+		<!-- cancel -->
+		<div id="aa14a_cancel_print_appointments_btn" class="aa14a_btn aa14a_bton_cancel">
+			<a><div class="aa14a_boton aa14a_boton_right">
+				 	<p><span class="fa fa-times"></span><fmt:message key="comun.cancelar" /></p>
+			   </div>
+			 </a>					
+		</div>
+	</div>
+</form>

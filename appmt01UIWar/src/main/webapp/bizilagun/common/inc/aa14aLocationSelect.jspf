@@ -1,0 +1,17 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody> 
+			<tr>
+				<td>
+					<p><fmt:message key="bizilagun.comunidades_alquileres"/></p>
+					<div class="aa14-serviceLocations">
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForBizilagun.LOC_COMUNIDADES_ALQUILERES_BIZ_ID %>"><fmt:message key="comun.bizkaia"/></div>
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForBizilagun.LOC_COMUNIDADES_ALQUILERES_AR_ID %>"><fmt:message key="comun.araba"/></div>
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForBizilagun.LOC_COMUNIDADES_ALQUILERES_GI_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

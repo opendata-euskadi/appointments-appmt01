@@ -1,0 +1,10 @@
+<div class="aa14a_bloque ocultar">
+
+	<!-- personal info -->
+	<%@include file="/trafikoa/inc/aa14aSolicitudForm.jspf" %>
+	
+<% if (authenticated) { %>
+	<!-- private details -->
+	<%@include file="/aa14aPrivateDetailsForm.jspf" %>
+<% } %>
+</div>

@@ -16,13 +16,13 @@ public class AA14NotificationMessageDataBuilderForBizilagun
 		//XXX temporal restriction only by telephone
     		
     	outData.add(AA14NotificationMessageData.create("instructions",
-    												   "Le llamaremos por tel�fono el d�a y hora reservado.","Telefonoz deituko dizugu erreserbatutako egunean eta orduan."));
+    												   "Le llamaremos por teléfono el día y hora reservado.","Telefonoz deituko dizugu erreserbatutako egunean eta orduan."));
     	
     	outData.add(AA14NotificationMessageData.create("warningTitle", 
     												   "ATENCI�N EXCLUSIVAMENTE TELEF�NICA","TELEFONO BIDEZKO ARRETA SOILIK"));
     		
     	outData.add(AA14NotificationMessageData.create("warningMessage", 
-    												   "Hasta nuevo aviso, las citas de este servicio ser�n telef�nicas. Si ya tienes reservada una cita, te llamaremos por tel�fono el d�a y hora reservado.",
+    												   "Hasta nuevo aviso, las citas de este servicio serán telefónicas. Si ya tienes reservada una cita, te llamaremos por telófono el día y hora reservado.",
     												   "Berriro abisatu arte, zerbitzu horretako hitzorduak telefono bidezkoak izango dira. Hitzordu bat erreserbatuta baduzu, telefonoz deituko dizugu erreserbatutako egunean eta orduan."));
 		return outData;
 	}

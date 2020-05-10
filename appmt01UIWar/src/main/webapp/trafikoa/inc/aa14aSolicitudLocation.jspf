@@ -1,0 +1,11 @@
+<div class="aa14a_bloque mostrar">
+	<div id="aa14a_errores_servicio"></div>
+
+	<%@include file="/trafikoa/inc/aa14aLocationSelect.jspf"%>
+
+	<div id="servicio" class="aa14a_detalle" style="display: none;">
+		<%@include file="/trafikoa/inc/aa14aLocationDetails.jspf"%>																
+	</div>
+</div>
+
+

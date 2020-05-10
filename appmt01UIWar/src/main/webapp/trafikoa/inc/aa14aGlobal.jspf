@@ -1,0 +1,28 @@
+<%@ page pageEncoding="UTF-8" %>
+
+<%@page import="java.util.Map"%>
+<%@page import="com.google.api.client.util.Maps"%>
+<%@page import="aa14f.client.api.AA14ClientAPI" %>
+<%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID"%>
+<%@page import="aa14f.model.config.AA14Schedule" %>
+<%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID" %>
+<%@page import="aa14a.security.AA14SecurityAuthCtxForTrafikoa"%>
+<%@page import="aa14f.model.config.business.AA14BusinessConfigForTrafikoa"%>
+
+
+<%@include file="/aa14aGlobal.jspf"%>
+
+
+<%
+	// If security auth is present set tha auth status
+	AA14SecurityAuthCtxForTrafikoa securityAuthCtx = new AA14SecurityAuthCtxForTrafikoa(request);
+	if (securityAuthCtx != null) {
+		authenticated = securityAuthCtx.isAuthenticated();
+		hasScheduleAccess = securityAuthCtx.hasScheduleAccess();
+	}
+	
+	// schedule configs
+	Map<AA14ScheduleID,AA14Schedule> schedulesById = api.configAPI()
+														 .getForTrafikoa()
+    													 .getSchedulesById();
+%>

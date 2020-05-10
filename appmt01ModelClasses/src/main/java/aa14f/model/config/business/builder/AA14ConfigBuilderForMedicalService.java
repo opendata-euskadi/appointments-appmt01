@@ -459,12 +459,12 @@ public class AA14ConfigBuilderForMedicalService
 		outCfg.setEmailTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/email/medical-service/AA14MailTemplateForMedicalService.vm"));
 		
 		// sms templates
-		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForMedicalService.vm"));
-		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForMedicalService.vm"));
-		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingDeleteTemplateForMedicalService.vm"));
-		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForMedicalService.vm"));
-		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForMedicalService.vm"));
-		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForMedicalService.vm"));	
+		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/medical-service/AA14MessagingTemplateForMedicalService.vm"));
+		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/medical-service/AA14MessagingTemplateForMedicalService.vm"));
+		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/medical-service/AA14MessagingDeleteTemplateForMedicalService.vm"));
+		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/medical-service/AA14MessagingTemplateForMedicalService.vm"));
+		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/medical-service/AA14MessagingTemplateForMedicalService.vm"));
+		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/medical-service/AA14MessagingTemplateForMedicalService.vm"));	
 		
 		// template model data
 		AA14NotificationMessageDataBuilderForMedicalService messageDataBuider = new AA14NotificationMessageDataBuilderForMedicalService();

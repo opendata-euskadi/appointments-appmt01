@@ -1,12 +1,23 @@
 package aa14.test;
 
+import java.io.StringWriter;
+import java.util.Map;
+import java.util.Properties;
+
+import org.apache.velocity.VelocityContext;
+import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.runtime.RuntimeConstants;
+import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
+
 import com.google.common.collect.Iterables;
+import com.google.common.collect.Maps;
 
 import aa14f.common.internal.AA14AppCodes;
 import aa14f.model.config.AA14OrganizationalModelObjectRef;
 import aa14f.model.config.AA14Schedule;
 import aa14f.model.oids.AA14IDs.AA14OrgDivisionServiceLocationID;
 import aa14f.model.oids.AA14OIDs.AA14OrgDivisionServiceLocationOID;
+import r01f.internal.R01F;
 import r01f.objectstreamer.Marshaller;
 import r01f.objectstreamer.MarshallerBuilder;
 
@@ -33,7 +44,35 @@ public class AA14MiscTest {
 				 .fromXml(xml,AA14Schedule.class);
 		ref = Iterables.getFirst(other.getServiceLocationsRefs(),null);
 		System.out.println("=========>" + ref.getOid() + " > " + ref.getId());
+		
+		_testVelocityEngine();
 	}
+/////////////////////////////////////////////////////////////////////////////////////////
+//	
+/////////////////////////////////////////////////////////////////////////////////////////
+	private static void _testVelocityEngine() {
+		Properties velocityProps = new Properties();
+		velocityProps.put(RuntimeConstants.DEFAULT_RUNTIME_LOG_NAME,"aa14velocity");
+		velocityProps.put(RuntimeConstants.RESOURCE_LOADER,"classpath");
+        velocityProps.put("classpath.resource.loader.class",ClasspathResourceLoader.class.getName());
+
+		VelocityEngine velocityEngine = new VelocityEngine();
+		velocityEngine.setProperties(velocityProps);
+		
+		// Template template = velocityEngine.getTemplate("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForJustizia.vm");
+		Map<String,Object> model = Maps.newHashMap();
+	    VelocityContext context = new VelocityContext(model);
+		StringWriter sw = new StringWriter();
+		velocityEngine.mergeTemplate("aa14b/notifier/email/justizia/AA14MailTemplateForJustizia.vm",
+			  						 R01F.DEFAULT_CHARSET.name(),
+			  						 context,
+			  						 sw);
+		sw.flush();
+		System.out.println(sw.toString());
+	}
+/////////////////////////////////////////////////////////////////////////////////////////
+//	
+/////////////////////////////////////////////////////////////////////////////////////////	
 	private static String _buildXml() {
 		String xml = "<schedule id='SCH_BIZILAGUN_COMUNIDADES_ALQUILERES_AR' oid='aa14pdh15c8175c3491b9d86de43cb5c9c6e31b2bb'>" +
 					 	"<bookingConfig minBookableHour='08:30:000' maxBookableHour='14:00:000' slotDefaultLengthMinutes='20' maxAppointmentsInSlot='2'/>" + 

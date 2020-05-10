@@ -1,0 +1,19 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.solicitud.location"/></th></tr></thead>	
+		<tbody>
+			<tr>
+				<td><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForTrafikoa.LOC_GASTEIZ_ID %>"><fmt:message key="comun.araba"/></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForTrafikoa.LOC_BILBAO_ID %>"><fmt:message key="comun.bizkaia"/><br></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForTrafikoa.LOC_DONOSTIA_ID %>"><fmt:message key="comun.gipuzkoa"/></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForTrafikoa.LOC_BILBAO_CATIT_ID %>"><fmt:message key="trafikoa.location.catit.prov"/></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

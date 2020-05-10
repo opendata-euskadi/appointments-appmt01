@@ -304,7 +304,7 @@ public class AA14ConfigBuilderForBloodDonation
 		outConfig.setEmailFromAddressOwner("Odol Ematea / Donación de Sangre");
 		
 		outConfig.setSmsFromPhoneNumber(Phone.of("012"));
-		outConfig.setSmsFromPhoneOwner("Odol Ematea / Donación de Sangre");
+		outConfig.setSmsFromPhoneOwner("CruzRoja");
 		
 		return outConfig;
 	}
@@ -320,12 +320,12 @@ public class AA14ConfigBuilderForBloodDonation
 		outCfg.setEmailTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/email/blood-donation/AA14MailTemplateForBloodDonations.vm"));
 		
 		// sms templates
-		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForBloodDonations.vm"));
-		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForBloodDonations.vm"));
-		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingDeleteTemplateForBloodDonations.vm"));
-		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForBloodDonations.vm"));
-		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForBloodDonations.vm"));
-		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForBloodDonations.vm"));	
+		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/blood-donation/AA14MessagingTemplateForBloodDonations.vm"));
+		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/blood-donation/AA14MessagingTemplateForBloodDonations.vm"));
+		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/blood-donation/AA14MessagingDeleteTemplateForBloodDonations.vm"));
+		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/blood-donation/AA14MessagingTemplateForBloodDonations.vm"));
+		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/blood-donation/AA14MessagingTemplateForBloodDonations.vm"));
+		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/blood-donation/AA14MessagingTemplateForBloodDonations.vm"));	
 		
 		// template model data
 		AA14NotificationMessageDataBuilderForBloodDonation messageDataBuider = new AA14NotificationMessageDataBuilderForBloodDonation();

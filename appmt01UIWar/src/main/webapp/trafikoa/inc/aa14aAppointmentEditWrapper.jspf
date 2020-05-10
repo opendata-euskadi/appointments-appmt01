@@ -1,0 +1,21 @@
+<!-- Called when editing an appointment clicking at the calendar -->
+
+
+
+<!-- Common appointment edit -->
+<%@include file="/aa14aAppointmentEditHeader.jspf"%>
+
+<!-- appointment details -->
+<%@include file="/trafikoa/inc/aa14aAppointmentDetails.jspf"%>
+
+<!-- Customer details -->
+<div id="aa14a_customer_details" class="aa14a_bloque ocultar">
+<%@include file="/trafikoa/inc/aa14aSolicitudForm.jspf"%>
+</div>
+
+<!-- private details -->
+<%@include file="/aa14aAppointmentPrivateDetails.jspf" %>
+
+<!-- Common appointment edit -->
+<%@include file="/aa14aAppointmentEditFooter.jspf"%>
+

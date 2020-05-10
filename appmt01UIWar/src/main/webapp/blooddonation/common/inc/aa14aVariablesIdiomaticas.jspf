@@ -1,0 +1,9 @@
+<!-- VARIABLES IDIOMATICAS -->
+<script type="text/javascript">
+//Textos para las opciones de la ultima donacion
+	var LESS_THAN_3_YEARS = "<fmt:message key='blooddonation.datospersonales.tiempodesdeultimadonacion.menosde3anyos'/>";
+	var MORE_THAN_3_YEARS = "<fmt:message key='blooddonation.datospersonales.tiempodesdeultimadonacion.masde3anyos'/>";
+	var NEVER = "<fmt:message key='blooddonation.datospersonales.tiempodesdeultimadonacion.nunca'/>";
+// Errores de validación del formulario de solicitante
+	var lastTimeDonatingMsgError = "<fmt:message key='blooddonation.solicitud.datospersonales.errores.tiempodesdeultimadonacion'/>";
+</script>

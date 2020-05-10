@@ -1,0 +1,34 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="bizilagun.inicio.calendar.instrucciones"/></p>
+	
+	<%
+	System.out.println(" Favourite schedule: " + securityAuthCtx.getFavoriteSheduleId());
+	System.out.println(" Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	%>
+	
+	<div>
+		<%-- ARABA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_AR_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_AR_ID %>" 
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_AR_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="bizilagun.comunidades_alquileres"/>
+		<% } %>
+		
+		<%-- BIZKAIA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_BIZ_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_BIZ_ID %>" 
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_BIZ_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="bizilagun.comunidades_alquileres"/>
+		<% } %>
+		
+		<%-- GIPUZKOA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_GI_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_GI_ID %>"
+			   type="radio"
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForBizilagun.SCH_COMUNIDADES_ALQUILERES_GI_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="bizilagun.comunidades_alquileres"/>
+		<% } %>
+	</div>
+</div>

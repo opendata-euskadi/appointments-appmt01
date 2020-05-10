@@ -1,0 +1,6 @@
+<div class="aa14a_bloque">
+
+	<!-- personal info -->		
+	<%@include file="/blooddonation/common/inc/aa14aSolicitudForm.jspf" %>
+	
+</div>

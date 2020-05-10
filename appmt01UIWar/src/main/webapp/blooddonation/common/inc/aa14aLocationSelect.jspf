@@ -1,0 +1,17 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody>
+			<tr>
+				<td>
+					<p><fmt:message key="blooddonation.donacion_sangre"/></p>
+					<div class="aa14-serviceLocations">
+						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForBloodDonation.LOC_DONACIONES_SANGRE_AR_ID %>" checked ><fmt:message key="comun.araba"/></div>
+						<div class='ocultar'><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForBloodDonation.LOC_DONACIONES_SANGRE_GI_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
+						<div class='ocultar'><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForBloodDonation.LOC_DONACIONES_SANGRE_BIZ_ID %>"><fmt:message key="comun.bizkaia"/></div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

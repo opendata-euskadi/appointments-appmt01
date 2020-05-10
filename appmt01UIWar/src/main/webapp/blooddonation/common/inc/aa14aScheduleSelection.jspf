@@ -1,0 +1,33 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="blooddonation.inicio.calendar.instrucciones"/></p>
+	
+	<%
+	System.out.println("Favourite schedule: " + securityAuthCtx.getFavoriteSheduleId());
+	System.out.println("Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	%>
+	
+	<div>
+		<%-- ARABA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_AR_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_AR_ID %>" 
+			   type="radio" 
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_AR_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="blooddonation.donacion_sangre"/> <fmt:message key="comun.araba"/>
+		<% } %>
+		<%-- BIZKAIA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_BIZ_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_BIZ_ID %>" 
+			   type="radio" 
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_BIZ_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="blooddonation.donacion_sangre"/> <fmt:message key="comun.bizkaia"/>
+		<% } %>
+		
+		<%-- GIPUZKOA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_GI_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_GI_ID %>" 
+			   type="radio" 
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForBloodDonation.SCH_DONACIONES_SANGRE_GI_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="blooddonation.donacion_sangre"/> <fmt:message key="comun.gipuzkoa"/>
+		<% } %>
+	</div>
+</div>

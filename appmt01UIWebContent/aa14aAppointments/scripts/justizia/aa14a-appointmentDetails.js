@@ -31,19 +31,19 @@ function paintCustomAppointmentDetails(appointment) {
 //Correlates a enum value for lastBloodDonation with code value
 function getProfileEnumFromCodeValue(enumValue){
 	
-	if (enumValue == "PERFIL_ABOGADO"){
+	if (enumValue == "ABOGADO"){
 		return 1;
 	}
-	else if (enumValue == "PERFIL_PROCURADOR"){
+	else if (enumValue == "PROCURADOR"){
 		return 2;
 	}
-	else if (enumValue == "PERFIL_CIUDADANIA"){
+	else if (enumValue == "CIUDADANIA"){
 		return 3;
 	}
-	else if (enumValue == "PERFIL_GRADUADO"){
+	else if (enumValue == "GRADUADO_SOCIAL"){
 		return 4;
 	}
-	else if (enumValue == "PERFIL_OTRO"){
+	else if (enumValue == "OTRO"){
 		return 5;
 	}
 	else return "";

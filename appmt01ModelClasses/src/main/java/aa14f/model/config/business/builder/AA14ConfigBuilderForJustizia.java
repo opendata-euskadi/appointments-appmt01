@@ -91,22 +91,22 @@ public class AA14ConfigBuilderForJustizia
 	private static final Color COLOR_JUSTIZIA = Color.from("2f5a7c"); 
 	
 	// Texts
-	private static final String SRV_REGISTRO_REPARTO_TXT_ES = "Registro y Reparto - Atenci�n presencial";
+	private static final String SRV_REGISTRO_REPARTO_TXT_ES = "Registro y Reparto - Atención presencial";
 	private static final String SRV_REGISTRO_REPARTO_TXT_EU = "Erregistro eta banaketa - Aurrez-aurreko arreta";
-	private static final String PROCEDURE_TXT_ES = "Presentaci�n de escritos de inicio";
+	private static final String PROCEDURE_TXT_ES = "Presentacin de escritos de inicio";
 	private static final String PROCEDURE_TXT_EU = "Hasierako Idazkiak aurkezteko gunea";
 	
 	private static final String LOC_REGISTRO_REPARTO_TXT_ES = "Servicio de Registro y Reparto";
 	private static final String LOC_REGISTRO_REPARTO_TXT_EU = "Erregistro eta Banaketa Zerbitzua";
-	private static final String LOC_AT_PUBLICO_TXT_ES = "Servicio de Informaci�n al P�blico";
+	private static final String LOC_AT_PUBLICO_TXT_ES = "Servicio de Informacón al Público";
 	private static final String LOC_AT_PUBLICO_TXT_EU = "Herritarrentzako Informazio Zerbitzua";
 	private static final String LOC_REGISTRO_CIVIL_TXT_ES = "Decanato y Regisro Civil";
 	private static final String LOC_REGISTRO_CIVIL_TXT_EU = "Dekanotza eta Erregistro Zibila";
 	private static final String LOC_SERVICIOS_COMUNES_TXT_ES = "Servicios comunes";
 	private static final String LOC_SERVICIOS_COMUNES_TXT_EU = "Zerbitzu Erkideak";
-	private static final String LOC_SERVICIO_COMUN_PROCESAL_TXT_ES = "Servicio Com�n Procesal - Secci�n General";
+	private static final String LOC_SERVICIO_COMUN_PROCESAL_TXT_ES = "Servicio Común Procesal - Sección General";
 	private static final String LOC_SERVICIO_COMUN_PROCESAL_TXT_EU = "Zerbitzu Erkide Prozesala - Atal Nagusia";
-	private static final String SCH_REGISTRO_REPARTO_TXT_ES = "Registro y Reparto - Atenci�n presencial";
+	private static final String SCH_REGISTRO_REPARTO_TXT_ES = "Registro y Reparto - Atención presencial";
 	private static final String SCH_REGISTRO_REPARTO_TXT_EU = "Erregistro eta banaketa - Aurrez-aurreko arreta";
 /////////////////////////////////////////////////////////////////////////////////////////
 //  METHODS
@@ -851,7 +851,7 @@ public class AA14ConfigBuilderForJustizia
 		outConfig.setEmailFromAddressOwner("Justizia.eus");
 		
 		outConfig.setSmsFromPhoneNumber(Phone.of("012"));
-		outConfig.setSmsFromPhoneOwner("Justizia.eus)");
+		outConfig.setSmsFromPhoneOwner("Justizia");
 		
 		return outConfig;
 	}
@@ -867,12 +867,12 @@ public class AA14ConfigBuilderForJustizia
 		outCfg.setEmailTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/email/justizia/AA14MailTemplateForJustizia.vm"));
 		
 		// sms templates
-		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForJustizia.vm"));
-		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForJustizia.vm"));
-		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingDeleteTemplateForJustizia.vm"));
-		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForJustizia.vm"));
-		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForJustizia.vm"));
-		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/trafikoa/AA14MessagingTemplateForJustizia.vm"));	
+		outCfg.setSmsTemplateForCreate(Path.from("aa14b/notifier/sms/justizia/AA14MessagingTemplateForJustizia.vm"));
+		outCfg.setSmsTemplateForUpdate(Path.from("aa14b/notifier/sms/justizia/AA14MessagingTemplateForJustizia.vm"));
+		outCfg.setSmsTemplateForDelete(Path.from("aa14b/notifier/sms/justizia/AA14MessagingDeleteTemplateForJustizia.vm"));
+		outCfg.setSmsTemplateForRemindToday(Path.from("aa14b/notifier/sms/justizia/AA14MessagingTemplateForJustizia.vm"));
+		outCfg.setSmsTemplateForRemindTomorrow(Path.from("aa14b/notifier/sms/justizia/AA14MessagingTemplateForJustizia.vm"));
+		outCfg.setSmsTemplateForPersonIdLocatorRemind(Path.from("aa14b/notifier/sms/justizia/AA14MessagingTemplateForJustizia.vm"));	
 		
 		// template model data
 		AA14NotificationMessageDataBuilderForJustizia messageDataBuider = new AA14NotificationMessageDataBuilderForJustizia();

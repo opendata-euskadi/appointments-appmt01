@@ -1,0 +1,68 @@
+	<div id="aa14a_errores_datospersonales"></div>
+	<div id="aa14_locator_response_dialog"  class='ocultar'>
+		<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="locatorMessage"></span></p>
+	</div>
+	<p class="aa14a_warning">
+		<span class="fa fa-asterisk"></span>
+		<fmt:message key="comun.solicitud.datospersonales.mandatory" />
+	</p>
+	<div id="aa14a_personal_info_frm">
+		<!-- appointment requestor data -->
+		<p class='aa14a_formData_requestor'><fmt:message key='comun.form.data.title.requestor' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="nif"><fmt:message key="comun.datospersonales.nif" />: </label>
+				<input type="text" name="nif" id="nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="nombre"><fmt:message key="comun.datospersonales.nombre" />: </label>
+				<input name="nombre" id="nombre" class="aa14a_input" type="text" 
+					   placeholder="<fmt:message key='comun.datospersonales.nombre.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="apellidos"><fmt:message key="comun.datospersonales.apellidos" />: </label>
+				<input type="text" name="apellidos" id="apellidos" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.apell.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="bloodDonation.notDonatedSince"><fmt:message key="blooddonation.datospersonales.tiempodesdeultimadonacion" />: </label>	
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+					<div>
+						<label> </label> 
+						<input type="radio" name="bloodDonation.notDonatedSince" value="1"/>
+						<span><fmt:message key='blooddonation.datospersonales.tiempodesdeultimadonacion.menosde3anyos' /></span>
+					</div>
+					<div>
+						<label> </label>
+							<input type="radio" name="bloodDonation.notDonatedSince" value="2"/>
+							<span><fmt:message key='blooddonation.datospersonales.tiempodesdeultimadonacion.masde3anyos' /></span>
+					<div>
+					<label> </label>
+						<input type="radio" name="bloodDonation.notDonatedSince" value="-1"/>
+						<span><fmt:message key='blooddonation.datospersonales.tiempodesdeultimadonacion.nunca' /></span>
+					</div>
+				</div>
+			</p>
+		</div>
+		
+		<!-- contact info -->
+		<p class='aa14a_formData_contactInfo'><fmt:message key='comun.form.data.title.contact' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="movil"><fmt:message key="comun.datospersonales.telefono" />: </label>
+				<input type="tel" name="movil" id="movil" class="aa14a_input"  
+				       placeholder="<fmt:message key='comun.datospersonales.movil.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>					
+			<p>
+				<label for="email"><fmt:message key="comun.datospersonales.correo" />: </label>
+				<input type="email" name="email" id="email" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.correo.placeholder' />" />
+			</p>
+			
+		</div>
+	</div>
