@@ -39,8 +39,11 @@
 <!-- MODULES                                                                -->
 <!-- ====================================================================== -->
 	<modules>
+		<module>appmt01ModelClasses</module>
+		<module>appmt01APIClasses</module>
 		<module>appmt01UIWar</module>
 		<module>appmt01UIWebContent</module>
+		<module>appmt01TestClasses</module>
 	</modules>
 
 <!-- ====================================================================== -->

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 		xmlns="http://maven.apache.org/POM/4.0.0"
-			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	
 <!-- ====================================================================== -->
@@ -12,33 +12,34 @@
 		<artifactId>appmt01</artifactId>
 		<version>${revision}</version>
 	</parent>
-  	
+	
 <!-- ====================================================================== -->
 <!-- ARTIFACT                                                               -->
 <!-- ====================================================================== -->
-	<groupId>appmt.appmt01.ui</groupId>
-	<name>appmt01UIWebContent</name>
-  	<artifactId>appmt01UIWebContent</artifactId>
-  	<packaging>pom</packaging>
-
+	<groupId>appmt.appmt01.api</groupId>
+	<name>appmt01APIClasses</name>
+	<artifactId>appmt01APIClasses</artifactId>
+	
 <!-- ====================================================================== -->
 <!-- DEPENDENCIES                                                           -->
 <!-- ====================================================================== -->
-	<dependencies>
+	<dependencies>	
 		<!-- ///////////////////////////////////////// -->
-		<!-- APPMNT: WebApp common                     -->
+		<!-- APPMT01 Model                             -->
 		<!-- ///////////////////////////////////////// -->
-		<!--
-		Since the [appointment] apps might be splitted by [tenant] in a near future (ie: [appmt01UIWar], [appmt02UIWar], etc)
-		the COMMON web-app code is located in two projects:
-			- [appmt00UIClasses]	> contains common java code > included as a 'normal' jar dependency
-			- [appmt00UIWar] 		> contains common JSP code  > overlayed as war (see http://maven.apache.org/plugins/maven-war-plugin/overlays.html)
-		-->
 		<dependency>
-			<groupId>appmt.appmt00.ui</groupId>
-			<artifactId>appmt00UIWebContent</artifactId>
+			<groupId>appmt.appmt01.api</groupId>
+			<artifactId>appmt01ModelClasses</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- APPMT00 API                             -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>appmt.appmt00.api</groupId>
+			<artifactId>appmt00APIClasses</artifactId>
 			<version>${appmt.common.version}</version>
-			<type>war</type>		<!-- BEWARE! it's an overlayed war (see also [maven-war-plugin] config below) -->
 		</dependency>
 	</dependencies>
 
@@ -82,13 +83,5 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		
-		<!-- War plugin (see overlays) -->
-		<plugins>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-			</plugin>
-		</plugins>
 	</build>
 </project>
-

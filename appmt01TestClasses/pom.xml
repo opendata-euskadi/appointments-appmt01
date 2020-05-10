@@ -12,33 +12,64 @@
 		<artifactId>appmt01</artifactId>
 		<version>${revision}</version>
 	</parent>
-  	
+	
 <!-- ====================================================================== -->
 <!-- ARTIFACT                                                               -->
 <!-- ====================================================================== -->
-	<groupId>appmt.appmt01.ui</groupId>
-	<name>appmt01UIWebContent</name>
-  	<artifactId>appmt01UIWebContent</artifactId>
-  	<packaging>pom</packaging>
-
+	<groupId>appmt.appmt01.test</groupId>
+	<name>appmt01TestClasses</name>
+	<artifactId>appmt01TestClasses</artifactId>
+	
 <!-- ====================================================================== -->
 <!-- DEPENDENCIES                                                           -->
 <!-- ====================================================================== -->
 	<dependencies>
 		<!-- ///////////////////////////////////////// -->
-		<!-- APPMNT: WebApp common                     -->
+		<!-- TEST                                      -->
 		<!-- ///////////////////////////////////////// -->
-		<!--
-		Since the [appointment] apps might be splitted by [tenant] in a near future (ie: [appmt01UIWar], [appmt02UIWar], etc)
-		the COMMON web-app code is located in two projects:
-			- [appmt00UIClasses]	> contains common java code > included as a 'normal' jar dependency
-			- [appmt00UIWar] 		> contains common JSP code  > overlayed as war (see http://maven.apache.org/plugins/maven-war-plugin/overlays.html)
-		-->
 		<dependency>
-			<groupId>appmt.appmt00.ui</groupId>
-			<artifactId>appmt00UIWebContent</artifactId>
-			<version>${appmt.common.version}</version>
-			<type>war</type>		<!-- BEWARE! it's an overlayed war (see also [maven-war-plugin] config below) -->
+			<groupId>r01.r01f.businessservices</groupId>
+			<artifactId>r01fBusinessServicesTestClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<!-- <scope>test</scope> --> <!-- test deps are NOT transitive! -->
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- APPMT01: API                              -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>appmt.appmt01.api</groupId>
+			<artifactId>appmt01APIClasses</artifactId>
+			<version>${revision}</version>
+		</dependency>
+
+		<!-- ///////////////////////////////////////// -->
+		<!-- APPMT00: CORE (stand-alone run)           -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>appmt.appmt00.core</groupId>
+			<artifactId>appmt00COREClasses</artifactId>
+			<version>${revision}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01F: BusinessServices                    -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.businessservices.guice.core</groupId>
+			<artifactId>r01fBusinessServicesCoreGuiceClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>r01.r01f.businessservices.guice.core</groupId>
+			<artifactId>r01fBusinessWebServicesCoreGuiceClasses</artifactId>
+			<version>${r01f.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -82,13 +113,5 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		
-		<!-- War plugin (see overlays) -->
-		<plugins>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-			</plugin>
-		</plugins>
 	</build>
 </project>
-

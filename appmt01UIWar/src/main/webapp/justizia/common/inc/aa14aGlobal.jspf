@@ -6,18 +6,18 @@
 <%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID"%>
 <%@page import="aa14f.model.config.AA14Schedule" %>
 <%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID" %>
-<%@page import="aa14a.ui.servlet.AA14XLNetsAuthCtxForJustizia"%>
+<%@page import="aa14a.security.AA14SecurityAuthCtxForJustizia"%>
 <%@page import="aa14f.model.config.business.AA14BusinessConfigForJustizia"%>
 
 
 <%@include file="/aa14aGlobal.jspf"%>
 <%
-	// If XLNets auth is present set tha auth status
-	AA14XLNetsAuthCtxForJustizia xlnetsAuthCtx = new AA14XLNetsAuthCtxForJustizia(request);
-	if (xlnetsAuthCtx != null) {	
+	// If [security auth] is present set tha auth status
+	AA14SecurityAuthCtxForJustizia securityAuthCtx = new AA14SecurityAuthCtxForJustizia(request);
+	if (securityAuthCtx != null) {	
 		// the user is authenticated
-		authenticated = xlnetsAuthCtx.isAuthenticated();
-		hasScheduleAccess = xlnetsAuthCtx.hasScheduleAccess();
+		authenticated = securityAuthCtx.isAuthenticated();
+		hasScheduleAccess = securityAuthCtx.hasScheduleAccess();
 	}
 	
 	// schedule configs
