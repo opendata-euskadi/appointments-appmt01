@@ -1,0 +1,10 @@
+<div class="aa14a_detalle">
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="nif"><fmt:message key="comun.datospersonales.nif" />: </label>
+				<input type="text" name="nif" id="nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />"/>
+			</p>
+		</div>
+</div>
+				

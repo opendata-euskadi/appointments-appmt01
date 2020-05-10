@@ -1,0 +1,14 @@
+<div class="aa14a_bloque mostrar">
+	<div id="aa14a_errores_servicio"></div>
+<% if (hasScheduleAccess) { %>
+	<%@include file="/medicalservice/internal/inc/aa14aLocationSelect.jspf"%>
+<%} 
+	else {%>	
+	<%@include file="/medicalservice/public/inc/aa14aLocationSelect.jspf"%>
+<%}
+%>
+	<div id="aa14a_error_delegacion" class="aa14a_detalle" style="display: none;"></div>
+	<div id="servicio" class="aa14a_detalle" style="display: none;">
+		<%@include file="/medicalservice/common/inc/aa14aLocationDetails.jspf"%>																
+	</div>
+</div>

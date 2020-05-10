@@ -1,0 +1,95 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="medicalservice.inicio.calendar.instrucciones"/></p>
+	<%
+	System.out.println("Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	
+	AA14ScheduleID favoriteSchedule = null;
+	if (securityAuthCtx.getUiUserPersonalData() != null
+		&& securityAuthCtx.getUiUserPersonalData().getCountyId() != null){
+
+			Long personalDataStateId=securityAuthCtx.getUiUserPersonalData().getCountyId().getId();
+			Long locArStateId= new Long("-1");
+			Long locGiStateId= new Long("-1");
+			Long locBizStateId= new Long("-1");
+						
+			if (api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID).getPosition().getCounty().getId() != null){
+				locArStateId = api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID).getPosition().getCounty().getId().getId();
+			}
+			if (api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_BIZ_ID).getPosition().getCounty().getId() != null){
+				locBizStateId = api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_BIZ_ID).getPosition().getCounty().getId().getId();
+			}
+			if (api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_GI_ID).getPosition().getCounty().getId() != null){
+				locGiStateId = api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_GI_ID).getPosition().getCounty().getId().getId();
+			}
+			// Locations for doctor and nurse visits are the same for each state so we only check this once
+		
+			if (personalDataStateId.equals(locArStateId) 
+			 || personalDataStateId.equals(Long.valueOf(0))){	// 0 = Lakua
+				favoriteSchedule = AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID;
+			} else if( personalDataStateId.equals(locBizStateId)){
+				favoriteSchedule = AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_BIZ_ID;
+			} else if (personalDataStateId.equals(locGiStateId)){
+				favoriteSchedule = AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_GI_ID;
+			}
+	}
+	System.out.println("Favorite schedule (based on security workplaceStateId): " + favoriteSchedule);
+	
+	if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID)
+	 || securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID)
+	 || securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID)) { %>
+		<br><br>
+		<p><fmt:message key="medicalservice.doctorVisit"/>:
+		<%-- ARABA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID %>" 
+			   type="radio" 
+			   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID)||
+			     AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_AR_ID.equals(favoriteSchedule))? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.araba"/>
+		<% } %>
+		<%-- BIZKAIA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_BIZ_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_BIZ_ID %>" 
+			   type="radio" 
+			    <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_BIZ_ID)||
+			     AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_BIZ_ID.equals(favoriteSchedule)) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.bizkaia"/>
+		<% } %>
+		<%-- GIPUZKOA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_GI_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_GI_ID %>" 
+			   type="radio" 
+			   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_GI_ID)||
+			     AA14BusinessConfigForMedicalService.SCH_DOCTOR_VISIT_GI_ID.equals(favoriteSchedule)) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.gipuzkoa"/>
+		<% } %></p>
+	
+	<% }
+	   if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_AR_ID)
+			|| securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_AR_ID)
+			|| securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_AR_ID)) { %>
+		<p><fmt:message key="medicalservice.nurseVisit"/>:
+		<%-- ARABA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_AR_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_AR_ID %>" 
+			   type="radio" 
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_AR_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.araba"/>
+		<% } %>
+		<%-- BIZKAIA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_BIZ_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_BIZ_ID %>" 
+			   type="radio" 
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_BIZ_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.bizkaia"/>
+		<% } %>
+		<%-- GIPUZKOA --%>
+		<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_GI_ID)) { %>
+		<input name="schId" value="<%= AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_GI_ID %>" 
+			   type="radio" 
+			   <%= securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForMedicalService.SCH_NURSE_VISIT_GI_ID) ? "checked=\"checked\"" : "" %>/>
+		<fmt:message key="comun.gipuzkoa"/>
+		<% } %>
+		</p>
+	<% } %>
+</div>

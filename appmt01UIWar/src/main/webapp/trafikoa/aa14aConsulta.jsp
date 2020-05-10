@@ -4,7 +4,7 @@
 <html lang="${langCode}">
 <head>
 	<%@include file="/head/aa14aHead.comun.jspf"%>
-	<%@include file="/trafikoa/common/inc/aa14aHead.trafikoa.jspf"%>
+	<%@include file="/trafikoa/inc/aa14aHead.trafikoa.jspf"%>
 	
 	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
 	

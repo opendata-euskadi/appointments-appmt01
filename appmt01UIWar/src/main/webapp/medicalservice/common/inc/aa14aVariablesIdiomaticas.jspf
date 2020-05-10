@@ -1,0 +1,22 @@
+<!-- VARIABLES IDIOMATICAS -->
+<script type="text/javascript">
+	//Textos formulario del solicitante
+	var motivo = "<fmt:message key='medicalservice.solicitud.appointment.motivo'/>";
+	var noDataMsg = "<fmt:message key='medicalservice.datospersonales.buscar.noresultados'/>";
+	
+	// Errores de validación del formulario de solicitante
+	var msgNoCounty = "<fmt:message key='medicalservice.solicitud.appointment.errores.delegacion'/>";
+	var msgNoBasqueCountry = "<fmt:message key='medicalservice.solicitud.appointment.errores.externo'/>";
+	
+	var motivoMsgError = "<fmt:message key='medicalservice.solicitud.appointment.errores.motivo'/>";
+	var fijoMsgError = "<fmt:message key='medicalservice.solicitud.datospersonales.errores.fijo'/>";
+	//Errores de validacion del formulario de busqueda
+	var servicioMsgError2 = "<fmt:message key='medicalservice.busqueda.servicio.error'/>";
+	
+	//Textos justificante
+	var fechaYLugar = "<fmt:message key='medicalservice.proof.timestamp'/>"
+	var firmado = "<fmt:message key='medicalservice.proof.signedBy'/>"
+	
+	
+
+</script>

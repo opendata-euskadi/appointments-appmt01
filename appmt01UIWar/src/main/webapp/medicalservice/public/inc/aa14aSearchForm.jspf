@@ -1,0 +1,25 @@
+<div class="aa14a_detalle">
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="nif"><fmt:message key="comun.datospersonales.nif" />: </label>
+				<input type="text" name="display_nif" id="display_nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getDni().equals("unknown")){ %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getDni()%>" disabled
+				<% } %>	 />
+				<input type="hidden" name="nif" id="nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getDni().equals("unknown")){ %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getDni()%>"
+				<% } %>	 />
+			</p>
+			<p>
+				<label for="history"><fmt:message key="medicalservice.busqueda.historico" />:</label>
+				<input class="aa14a_input" type="checkbox" id="history" name="history"/>
+				<div id="aa14a_history_date"><input name="search_start_date" class="aa14a_input"value=""></div>
+			</p>
+		</div>
+</div>
+				

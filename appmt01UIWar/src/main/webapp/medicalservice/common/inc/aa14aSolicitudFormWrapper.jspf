@@ -1,0 +1,13 @@
+<div class="aa14a_bloque ocultar">
+
+	<!-- personal info -->		
+	<% if (hasScheduleAccess) { %>
+	<%@include file="/medicalservice/internal/inc/aa14aSolicitudForm.jspf"%>
+	<%} 
+	else {
+	%>	
+	<%@include file="/medicalservice/public/inc/aa14aSolicitudForm.jspf"%>
+	<%}
+	%>
+	
+</div>

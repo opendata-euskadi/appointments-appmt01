@@ -6,16 +6,16 @@
 <%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID"%>
 <%@page import="aa14f.model.config.AA14Schedule" %>
 <%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID" %>
-<%@page import="aa14a.security.AA14SecurityAuthCtxForBloodDonation"%>
-<%@page import="aa14f.model.config.business.AA14BusinessConfigForBloodDonation"%>
+<%@page import="aa14a.security.AA14SecurityAuthCtxForMedicalService"%>
+<%@page import="aa14f.model.config.business.AA14BusinessConfigForMedicalService"%>
 <%@page import="aa14f.model.config.business.AA14BusinessConfig"%>
 <%@page import="r01f.patterns.FactoryFrom"%>
 
 
 <%@include file="/aa14aGlobal.jspf"%>
 <%
-	// If securtity auth is present set the auth status
-	AA14SecurityAuthCtxForBloodDonation securityAuthCtx = new AA14SecurityAuthCtxForBloodDonation(request);
+	// If security auth is present set the auth status
+	AA14SecurityAuthCtxForMedicalService securityAuthCtx = new AA14SecurityAuthCtxForMedicalService(request);
 	if (securityAuthCtx != null) {	
 		// the user is authenticated
 		authenticated = securityAuthCtx.isAuthenticated();
@@ -23,10 +23,10 @@
 	}
 	
 	// schedule configs
-	Map<AA14ScheduleID,AA14Schedule> schedulesById = api.configAPI().getConfigFor(AA14BusinessID.BLOOD_DONATION,
-																				  new FactoryFrom<AA14BusinessConfig,AA14BusinessConfigForBloodDonation>() {
-																						public AA14BusinessConfigForBloodDonation from(final AA14BusinessConfig businessConfig) {
-																							return AA14BusinessConfigForBloodDonation.wrap(businessConfig);
+	Map<AA14ScheduleID,AA14Schedule> schedulesById = api.configAPI().getConfigFor(AA14BusinessID.MEDICAL_SERVICE,
+																				  new FactoryFrom<AA14BusinessConfig,AA14BusinessConfigForMedicalService>() {
+																						public AA14BusinessConfigForMedicalService from(final AA14BusinessConfig businessConfig) {
+																							return AA14BusinessConfigForMedicalService.wrap(businessConfig);
 																						}
 																				  })
     													 .getSchedulesById();

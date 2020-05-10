@@ -1,0 +1,28 @@
+<section class="aa14a_resumen_cita">
+	
+	<!-- fecha / hora -->
+	<p class="aa14a_datos-cita" colspan="2">
+		<span><fmt:message key="medicalservice.fechahora"/>: <span id="citaSelec"></span></span><br>
+		<span id="exitHourProof" class="ocultar"><fmt:message key='medicalservice.proof.endHour'/>: <span id="currentHour"></span></span>
+	</p>
+	<!-- fecha / hora solicitud -->
+	<div id="citaSol" class="ocultar">
+		<p class="aa14a_etiquetas"><fmt:message key="comun.requestedAt"/>: <span class="aa14a_valores" id="appointmentRequestedAt"></span></p>
+	</div>
+	
+	<!-- datos -->						
+	<div id="aa14a_appointmentDetail-left" class="aa14a_detalle">
+		<%@include file="/medicalservice/common/inc/aa14aLocationDetails.jspf"%>
+	</div>
+	<div id="aa14a_appointmentDetail-right" class="aa14a_detalle"> 
+	
+	<% if (hasScheduleAccess) { %>
+	<%@include file="/medicalservice/internal/inc/aa14aCustomerDetails.jspf"%>
+	<%} 
+	else {
+	%>	
+	<%@include file="/medicalservice/public/inc/aa14aCustomerDetails.jspf"%>
+	<%}
+	%>
+	</div>
+</section>

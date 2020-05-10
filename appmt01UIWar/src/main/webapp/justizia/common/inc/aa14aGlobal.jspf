@@ -1,4 +1,3 @@
-<%@page import="r01f.patterns.FactoryFrom"%>
 <%@ page pageEncoding="UTF-8" %>
 
 <%@page import="java.util.Map"%>
@@ -11,7 +10,7 @@
 <%@page import="aa14f.model.config.business.AA14BusinessConfigForJustizia"%>
 <%@page import="aa14f.model.oids.AA14IDs.AA14BusinessID"%>
 <%@page import="aa14f.model.config.business.AA14BusinessConfig"%>
-
+<%@page import="r01f.patterns.FactoryFrom"%>
 
 <%@include file="/aa14aGlobal.jspf"%>
 <%

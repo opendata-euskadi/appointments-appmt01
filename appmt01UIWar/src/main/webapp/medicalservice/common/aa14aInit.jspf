@@ -1,10 +1,11 @@
-<%@include file="/trafikoa/inc/aa14aGlobal.jspf"%>
+<%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID" %>
+<%@include file="/medicalservice/common/inc/aa14aGlobal.jspf"%>
 
 <!DOCTYPE html>
 <html lang="${langCode}">
 <head>
 	<%@include file="/head/aa14aHead.comun.jspf"%>
-	<%@include file="/trafikoa/inc/aa14aHead.trafikoa.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aHead.medicalservice.jspf"%>
 	
 	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
 	<%@include file="/head/aa14aHead.calendar.styles.jspf"%>
@@ -13,8 +14,8 @@
 	
 	<%@include file="/head/aa14aHead.calendar.scripts.jspf"%>
 	
-	<script src="/appcont/aa14aAppointments/scripts/trafikoa/aa14a-appointmentDetails.js"></script>
-	<script src="/appcont/aa14aAppointments/scripts/trafikoa/aa14a-form.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-appointmentDetails.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-form.js"></script>
 	<script src="/appcont/aa14aAppointments/scripts/aa14a-validations.js"></script>
 	
 	<script src="/appcont/aa14aAppointments/scripts/aa14a-printAppointmentsDialog.js"></script>
@@ -26,18 +27,20 @@
 
 <body>
 	<%@include file="/aa14aJSDynamicVars.jspf"%>
-	<%@include file="/trafikoa/inc/aa14aVariablesIdiomaticas.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aVariablesIdiomaticas.jspf"%>
 	
 	
-	<%@include file="/trafikoa/inc/aa14aHeader.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aHeader.jspf"%>
 	
 	<div class="aa14a_contenido">
 		<!-- Solicitar Cita / Consultar o Cancelar cita -->
 		<section>
-			<p class="aa14a_introduccion">
-				<fmt:message key="trafikoa.inicio.mensaje.bienvenida" />
-				<fmt:message key="trafikoa.inicio.mensaje.instrucciones" />
-			</p>
+			
+			<%if (securityAuthCtx.getUiUserPersonalData() != null
+		&& securityAuthCtx.getUiUserPersonalData().getName()!=null){%>
+				<p class="aa14a_introduccion"><fmt:message key="medicalservice.inicio.mensaje.saludo"/>&nbsp;<%=securityAuthCtx.getUiUserPersonalData().getName()%><fmt:message key="medicalservice.inicio.mensaje.bienvenida"/></p><br><br>
+		<%}%>
+			<p class="aa14a_introduccion"><fmt:message key="medicalservice.inicio.mensaje.instrucciones" /></p>
 			
 			<nav id="aa14a_box" class='aa14aclearfix'>
 				<div id="aa14a_left">
@@ -58,18 +61,21 @@
 				</div>
 			</nav>
 			<!-- 			
-			<p class="aa14a_introduccion"><fmt:message key="trafikoa.inicio.mensaje.informacion" /></p>
+			<p class="aa14a_introduccion"><fmt:message key="medicalservice.inicio.mensaje.informacion" /></p>
 			 -->
 		</section>
+		
 	<% if (authenticated && hasScheduleAccess) { %>
+		<script>
+		</script>
 		<!-- Reserva de huecos -->
-		<!-- Calendario de citas (ver AA14BusinessConfigForTrafikoa para las constantes)-->
+		<!-- Calendario de citas (ver AA14BusinessConfigForMedicalService para las constantes)-->
 		<section class="aa14a_calendario_citas">
 			<!-- schedule selection -->
-			<%@include file="/trafikoa/inc/aa14aScheduleSelection.jspf"%>
+			<%@include file="/medicalservice/common/inc/aa14aScheduleSelection.jspf"%>
 			
 			<!-- full calendar -->
-			<div id='calendar'></div>	<!-- div where fullcalendar.js injects it's html -->	
+			<div id='calendar'></div>	<!-- div where fullcalendar.js injects it's html -->
 			
 			<!-- Print appointments Button bar -->
 			<div class='aa14_button_bar'>
@@ -81,18 +87,16 @@
 				</div>
 			</div>
 		</section>
-		
+			
 		<!-- Print appointments Pop-up -->
 		<div id='aa14a_print_appointments_dialog' class='ocultar'>
-			<%@include file="/trafikoa/inc/aa14aPrintAppointments.jspf"%>
+			<%@include file="/medicalservice/internal/inc/aa14aPrintAppointments.jspf"%>
 		</div>
-			
 			
 		<!-- Pop-up de edición de citas (cambiar hora, borrar...) -->
 		<div id='aa14a_editAppointment_dialog'>
-			<%@include file="/trafikoa/inc/aa14aAppointmentEditWrapper.jspf"%>
+			<%@include file="/medicalservice/common/inc/aa14aAppointmentEditWrapper.jspf"%>
 		</div>
-		
 		
 		<!-- Pop-up de reserva de huecos -->
 		<div id='aa14a_reserveSlot_dialog' class='ocultar'>
@@ -106,8 +110,6 @@
 		<div id="aa14_booked_slot_release_response_dialog" class='ocultar'>
 			<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><fmt:message key="anular.confirmacion"/></p>
 		</div>
-		
-		
 	<% } %>
 	
 	</div>
@@ -118,4 +120,3 @@
 
 </body>
 </html>
-

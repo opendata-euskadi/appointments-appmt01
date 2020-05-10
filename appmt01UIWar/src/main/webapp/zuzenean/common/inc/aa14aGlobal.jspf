@@ -8,6 +8,8 @@
 <%@page import="aa14f.model.oids.AA14IDs.AA14ScheduleID" %>
 <%@page import="aa14a.security.AA14SecurityAuthCtxForZuzenean"%>
 <%@page import="aa14f.model.config.business.AA14BusinessConfigForZuzenean"%>
+<%@page import="aa14f.model.config.business.AA14BusinessConfig"%>
+<%@page import="r01f.patterns.FactoryFrom"%>
 
 
 <%@include file="/aa14aGlobal.jspf"%>
@@ -21,9 +23,13 @@
 	}
 	
 	// schedule configs
-	Map<AA14ScheduleID,AA14Schedule> schedulesById = api.configAPI()
-														.getForZuzenean()
-    													.getSchedulesById();
+	Map<AA14ScheduleID,AA14Schedule> schedulesById = api.configAPI().getConfigFor(AA14BusinessID.ZUZENEAN,
+																				  new FactoryFrom<AA14BusinessConfig,AA14BusinessConfigForZuzenean>() {
+																						public AA14BusinessConfigForZuzenean from(final AA14BusinessConfig businessConfig) {
+																							return AA14BusinessConfigForZuzenean.wrap(businessConfig);
+																						}
+																				  })
+    													 .getSchedulesById();
 %>
 
 

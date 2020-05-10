@@ -1,0 +1,104 @@
+	<div id="aa14a_errores_datospersonales"></div>
+	<div id="aa14_locator_response_dialog"  class='ocultar'>
+		<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="locatorMessage"></span></p>
+	</div>
+	<p class="aa14a_warning">
+		<span class="fa fa-asterisk"></span>
+		<fmt:message key="comun.solicitud.datospersonales.mandatory" />
+	</p>
+	<div id="aa14a_personal_info_frm">
+		<!-- appointment requestor data -->
+		<p class='aa14a_formData_requestor'><fmt:message key='comun.form.data.title.requestor' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="display_nif"><fmt:message key="comun.datospersonales.nif" />: </label>
+				<input type="text" name="display_nif" id="display_nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getDni().equals("unknown")){ %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getDni()%>" disabled
+				<% } %>	 />
+				<input type="hidden" name="nif" id="nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getDni().equals("unknown")){ %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getDni()%>" 
+				<% } %>	 />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="display_nombre"><fmt:message key="comun.datospersonales.nombre" />: </label>
+				<input name="display_nombre" id="display_nombre" class="aa14a_input" type="text" 
+					   placeholder="<fmt:message key='comun.datospersonales.nombre.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getName().equals("unknown")) { %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getName()%>" disabled
+				<% } %>	 />
+				<input name="nombre" id="nombre" class="aa14a_input" type="hidden" 
+					   placeholder="<fmt:message key='comun.datospersonales.nombre.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getName().equals("unknown")) { %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getName()%>"
+				<% } %>	 />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="display_apellidos"><fmt:message key="comun.datospersonales.apellidos" />: </label>
+				<input type="text" name="display_apellidos" id="display_apellidos" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.apell.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getSurname().equals("unknown")) { %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getSurname()%>" disabled
+				<% } %>	 />
+				<input type="hidden" name="apellidos" id="apellidos" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.apell.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getSurname().equals("unknown")) { %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getSurname()%>"
+				<% } %>	 />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="fijo"><fmt:message key="medicalservice.datospersonales.fijo" />: </label>
+				<input type="tel" name="fijo" id="fijo" class="aa14a_input"  
+				       placeholder="<fmt:message key='medicalservice.datospersonales.fijo.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getTelephone().equals("unknown")) { %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getTelephone()%>" 
+				<% } %>	 />
+			</p>
+		</div>
+		<!-- contact info -->
+		<p class='aa14a_formData_contactInfo'><fmt:message key='comun.form.data.title.contact' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="movil"><fmt:message key="medicalservice.datospersonales.movil" />: </label>
+				<input type="tel" name="movil" id="movil" class="aa14a_input"  
+				       placeholder="<fmt:message key='comun.datospersonales.movil.placeholder' />"/>
+			</p>					
+			<p>
+				<label for="email"><fmt:message key="comun.datospersonales.correo" />: </label>
+				<input type="email" name="email" id="email" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.correo.placeholder' />"
+				<% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getMail().asString().equals("unknown")) { %>
+					value="<%=securityAuthCtx.getUiUserPersonalData().getMail()%>"
+				<% } %>	 />
+			</p>
+		</div>
+		
+		<!-- Appointment details -->
+		<p class='aa14a_formData_appointmentDetails'><fmt:message key='comun.form.data.title.appointmentData' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="subjectDetail" class="subjectDetail"><fmt:message key="medicalservice.solicitud.appointment.motivo" />: </label>
+				<textarea rows="4" cols="50" maxlength="255"  wrap="hard"
+						  name="subjectDetail" id="subjectDetail" class="aa14a_input"
+					   	  placeholder="<fmt:message key='medicalservice.solicitud.appointment.motivo.placeholder' />"></textarea>
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+		</div>
+		
+		
+		
+	</div>

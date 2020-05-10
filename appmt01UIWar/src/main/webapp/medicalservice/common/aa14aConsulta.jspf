@@ -1,0 +1,94 @@
+<%@include file="/medicalservice/common/inc/aa14aGlobal.jspf"%>
+
+<!DOCTYPE html>
+<html lang="${langCode}">
+<head>
+	<%@include file="/head/aa14aHead.comun.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aHead.medicalservice.jspf"%>
+	
+	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
+	
+	<%@include file="/head/aa14aHead.comun.scripts.jspf"%>	
+	
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-appointmentDetails.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-form.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-print.js"></script>
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+		var nombreCapa =  "${param.nombreCapa}";
+		var appointmentId = "${param.appointmentId}";
+		moment.locale("${langCode}");
+		<% if (hasScheduleAccess) { %>
+		var userName = "<%=securityAuthCtx.getUiUserPersonalData().getName()%> <%=securityAuthCtx.getUiUserPersonalData().getSurname()%>";
+		<%}%>
+	</script>
+	
+	<%@include file="/aa14aJSDynamicVars.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aVariablesIdiomaticas.jspf"%>
+	
+	<%@include file="/medicalservice/common/inc/aa14aHeader.jspf"%>
+
+	<div class="aa14a_contenido">										
+		<!-- <h2 id="aa14a_titulo_pagina_imprimir" style="display: none;"><span class="fa fa-square"></span><fmt:message key="imprimir.titulo" /></h2>-->
+		<h2 id="aa14a_titulo_pagina_anular" style="display: none;"><span class="fa fa-square"></span><fmt:message key="anular.titulo" /></h2>
+		
+		<!-- appointment details -->
+		<%@include file="/medicalservice/common/inc/aa14aAppointmentDetails.jspf"%>
+					
+			
+		<div id= "aa14a_capa_imprimir" class="ocultar">
+			<!-- warning -->
+			<div class="aa14a_solicitud_warn">
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+				<fmt:message key="medicalservice.appointment.warning"/>
+			</div>
+			<div class="aa14a_solicitud_bloqueAzul">
+				<p><fmt:message key="medicalservice.solicitud.resumen.recordatorio"/></p>							
+			</div>
+			
+			<!--  Inicio -->
+			<div class="aa14a_btn_anterior_siguiente">
+				<a href="aa14aInit.jsp?lang=<%=langStr%>">
+					<div class="aa14a_boton aa14a_boton_right aa14a_boton_salir">
+						<p><span class="fa fa-home"></span><fmt:message key="comun.salir"/></p>
+					 </div>
+				</a>					
+			</div>
+			<!-- print -->
+			<div id="aa14a_print_btn" class="aa14a_btn_anterior_siguiente">								
+				<a><div class="aa14a_boton aa14a_boton_right">
+						<p><span class="fa fa-print"></span><fmt:message key="comun.imprimir"/></p>
+				   </div>
+				</a>
+			</div>
+		</div>
+		<div id="aa14a_capa_justificante" class="ocultar">
+			<div id="aa14a_firma" class="aa14a_justificante_firma centered">
+				<p id="aa14a_firma_fecha"></p>
+				<% if (hasScheduleAccess) { %>
+				<p id="aa14a_firma_firmante"></p>
+				<% } %>
+			</div>
+			
+			<!--  Inicio -->
+			<div class="aa14a_btn_anterior_siguiente">
+				<a href="aa14aInit.jsp?lang=<%=langStr%>">
+					<div class="aa14a_boton aa14a_boton_right aa14a_boton_salir">
+						<p><span class="fa fa-home"></span><fmt:message key="comun.salir"/></p>
+					 </div>
+				</a>					
+			</div>
+			<!-- print -->
+			<div id="aa14a_print_proof_btn" class="aa14a_btn_anterior_siguiente">								
+				<a><div class="aa14a_boton aa14a_boton_right">
+						<p><span class="fa fa-print"></span><fmt:message key="comun.imprimir"/></p>
+				   </div>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

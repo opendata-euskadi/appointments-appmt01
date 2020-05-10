@@ -1,0 +1,39 @@
+<table class='aa14a_tabla_datos_resumen'>
+	<thead>
+		<tr>
+			<th colspan="2"><fmt:message key="comun.datospersonales"/></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.nif"/>:</td>
+			<td class="aa14a_valores" id="datonif"><% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getDni().equals("unknown")) { %><%=securityAuthCtx.getUiUserPersonalData().getDni()%><% } %></td>
+		</tr>
+		<tr>
+			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.nombre"/>:</td>
+			<td class="aa14a_valores" id="datonombre"><% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getName().equals("unknown")) { %><%=securityAuthCtx.getUiUserPersonalData().getName()%><% } %></td>
+		</tr>
+		<tr>
+			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.apellidos"/>:</td>
+			<td class="aa14a_valores" id="datoapellidos"><% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getSurname().equals("unknown")) { %><%=securityAuthCtx.getUiUserPersonalData().getSurname()%><% } %></td>
+		</tr>	
+		<tr>
+			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.telefono"/>:</td>
+			<td class="aa14a_valores" id="datofijo"><% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getTelephone().equals("unknown")) { %><%=securityAuthCtx.getUiUserPersonalData().getTelephone()%><% } %></td>
+		</tr>
+		<tr>
+			<td class="aa14a_etiquetas"><fmt:message key="medicalservice.datospersonales.movil"/>:</td>
+			<td class="aa14a_valores" id="datomovil"></td>
+		</tr>			
+		<tr>
+			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.correo"/>:</td>
+			<td class="aa14a_valores" id="datoemail"><% if (securityAuthCtx.getUiUserPersonalData() != null
+					&& !securityAuthCtx.getUiUserPersonalData().getMail().asString().equals("unknown")) { %><%=securityAuthCtx.getUiUserPersonalData().getMail()%><% } %></td>
+		</tr>
+		
+	</tbody>
+</table>

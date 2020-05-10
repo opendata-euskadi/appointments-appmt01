@@ -1,0 +1,38 @@
+<!-- Called when editing an appointment clicking at the calendar -->
+<!-- appointment details -->
+<%@include file="/medicalservice/common/inc/aa14aAppointmentDetails.jspf"%>
+
+<!-- Common appointment edit -->
+<%@include file="/aa14aAppointmentEditHeader.jspf"%>
+
+<!-- Customer details -->
+<div id="aa14a_customer_details" class="aa14a_bloque ocultar">
+<% if (hasScheduleAccess) { %>
+	<%@include file="/medicalservice/internal/inc/aa14aSolicitudForm.jspf"%>
+	<%
+	} 
+	else {
+	%>	
+	<%@include file="/medicalservice/public/inc/aa14aSolicitudForm.jspf"%>
+	<%
+	}
+%>
+</div>
+
+<!--- appointment subject -->
+<% if (hasScheduleAccess) { %>
+<section id="subjectDetailsSection" class="aa14aPrivateDetails">
+	<label for="subjectDetail"><fmt:message key="medicalservice.solicitud.appointment.motivo" />: </label>
+	<div id="datosubjectDetail"></div>
+</section>
+	<%@include file="/medicalservice/internal/inc/aa14aAppointmentEditFooter.jspf"%>
+<%
+	}
+else {
+	%>	
+	<!-- Common appointment edit -->
+	<%@include file="/aa14aAppointmentEditFooter.jspf"%>
+	<%
+	}
+%>
+

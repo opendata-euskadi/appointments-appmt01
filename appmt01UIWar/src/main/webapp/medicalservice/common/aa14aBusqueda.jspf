@@ -1,20 +1,21 @@
-<%@include file="/trafikoa/inc/aa14aGlobal.jspf"%>
+<%@page import="aa14f.model.oids.AA14IDs.AA14OrgDivisionServiceLocationID" %>
+<%@include file="/medicalservice/common/inc/aa14aGlobal.jspf"%>
 
 <!DOCTYPE html>
 <html lang="${langCode}">
 <head>
 	<%@include file="/head/aa14aHead.comun.jspf"%>
-	<%@include file="/trafikoa/inc/aa14aHead.trafikoa.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aHead.medicalservice.jspf"%>
 	
 	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
 	
 	<%@include file="/head/aa14aHead.comun.scripts.jspf"%>	
 	
 	<script src="/appcont/aa14aAppointments/scripts/aa14a-appointmentSearch.js"></script>
-	
-	<script src="/appcont/aa14aAppointments/scripts/trafikoa/aa14a-search.js"></script>
-	<script src="/appcont/aa14aAppointments/scripts/trafikoa/aa14a-appointmentDetails.js"></script>
-	<script src="/appcont/aa14aAppointments/scripts/trafikoa/aa14a-form.js"></script>
+		
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-search.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-appointmentDetails.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/medicalservice/aa14a-form.js"></script>
 	<script src="/appcont/aa14aAppointments/scripts/aa14a-validations.js"></script>
 	
 	<script src="/appcont/aa14aAppointments/scripts/aa14a-appointmentDateTimeSelectionCalendar.js"></script>
@@ -22,9 +23,9 @@
 
 <body>
 	<%@include file="/aa14aJSDynamicVars.jspf"%>
-	<%@include file="/trafikoa/inc/aa14aVariablesIdiomaticas.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aVariablesIdiomaticas.jspf"%>
 	
-	<%@include file="/trafikoa/inc/aa14aHeader.jspf"%>
+	<%@include file="/medicalservice/common/inc/aa14aHeader.jspf"%>
 	
 	<div class="aa14a_contenido" id="aa14_appointment_search">										
 		<h2 id="aa14a_titulo_pagina"><span class="fa fa-square"></span><fmt:message key="busqueda.titulo" /></h2>
@@ -33,26 +34,44 @@
 				<h3><fmt:message key="busqueda.informacion" /></h3>
 			</div>
 			
-			<!-- Errores de validación -->
+			<!-- Errores de validacion -->
 			<div id="aa14a_errores_busqueda"></div>
 			
-			<!-- Formulario de búsqueda -->
-			<form action="" method="get" name="formBuscarCitas" id="formBuscarCitas" class='aa14a_form'>
+			<!-- Formulario de busqueda -->
+			<form action="" method="get" name="formBuscarCitas" id="formBuscarCitas" class='aa14a_form aa14aclearfix'>
 				<input type=hidden id="op" name="op">
 				<input type=hidden id="lang" name="lang">
-				<input type=hidden id="serviceId" name="serviceId" value="<%= AA14BusinessConfigForTrafikoa.SERVICE_ID %>">
+						
+				<!-- Service selection -->
 				
-				<p class="aa14a_comentario"><span class="fa fa-commenting"></span><fmt:message key="trafikoa.busqueda.texto" /></p>
-				<p>
-					<label for="codExp"><fmt:message key="comun.datospersonales.codexpediente" />: </label>
-					<input class="aa14a_input" type="text" name="codExp" id="codExp" autofocus="true" placeholder="<fmt:message key='comun.datospersonales.codExp.placeholder' />">
-				</p>
-				<p>
-					<label for="nif"><fmt:message key="comun.datospersonales.nif" />:</label>
-					<input class="aa14a_input" type="text" name="nif" id="nif"  placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />">
-					
-				</p>
+				<% if (hasScheduleAccess) { %>
+				<p class="aa14a_comentario"><span class="fa fa-commenting"></span><fmt:message key="medicalservice.busqueda.texto.internal" /></p>
+				<%@include file="/medicalservice/internal/inc/aa14aLocationSelect.jspf"%>
+				<%@include file="/medicalservice/internal/inc/aa14aSearchForm.jspf"%>
 				<%@include file="/aa14aSearchCommonForm.jspf"%>
+				<%
+				} 
+				else {
+					if (securityAuthCtx.getUiUserPersonalData() != null) {
+						if 	(securityAuthCtx.getUiUserPersonalData().getBuildingCode() != null
+							&& securityAuthCtx.getUiUserPersonalData().getBuildingCode().equals(AA14BusinessConfigForMedicalService.CENTRO_EDUCATIVO_ZUMARRAGA_BUILDING_CODE)){
+					%><script language="javascript">
+						var canSelectAnyCounty=true; <!-- necesary to show the correct message for mandatory territory an service selection -->
+					</script>	
+					<p class="aa14a_comentario"><span class="fa fa-commenting"></span><fmt:message key="medicalservice.busqueda.texto.public.withCounty" /></p>
+				   <%}
+					else if (securityAuthCtx.getUiUserPersonalData().getCountyId() != null){
+					%><script language="javascript">
+						var canSelectAnyCounty=false; <!-- necesary to show the correct message for mandatory service selection -->
+					</script>
+					<p class="aa14a_comentario"><span class="fa fa-commenting"></span><fmt:message key="medicalservice.busqueda.texto.public" /></p>
+				  <%}
+				}%>
+				<%@include file="/medicalservice/public/inc/aa14aLocationSelect.jspf"%>
+				<%@include file="/medicalservice/public/inc/aa14aSearchForm.jspf"%>
+			<%
+			}	%>
+			
 			</form>
 			<div class="aa14a_btn_anterior_siguiente">
 				<a><div id="aa14a_realizar_busqueda" class="aa14a_boton aa14a_boton_center">
@@ -61,7 +80,7 @@
 				</a>
 			</div>
 			
-			<!-- Resultados de búsqueda -->
+			<!-- Resultados de bï¿½squeda -->
 			<div id="aa14a_search_results" class="aa14a_tabla ocultar">
 				<table class="table-bordered table-striped table-condensed cf">
 					<thead class="cf"><tr>
@@ -89,7 +108,7 @@
 	
 	<!-- Editar cita (cambiar hora) -->
 	<div id='aa14a_editAppointment_dialog'>
-		<%@include file="/trafikoa/inc/aa14aAppointmentEditWrapper.jspf"%>
+		<%@include file="/medicalservice/common/inc/aa14aAppointmentEditWrapper.jspf"%>
 	</div>
 	
 	<!-- Release slot dialogs -->

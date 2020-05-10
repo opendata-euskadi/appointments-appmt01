@@ -1,0 +1,30 @@
+<%
+	if (securityAuthCtx.getUiUserPersonalData() != null
+		&& securityAuthCtx.getUiUserPersonalData().getCountyId()!=null){
+						
+		Long personalDataStateId=securityAuthCtx.getUiUserPersonalData().getCountyId().getId();
+		Long locArStateId= new Long("-1");
+		Long locGiStateId= new Long("-1");
+		Long locBizStateId= new Long("-1");
+					
+		if (api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID).getPosition().getCounty().getId() != null){
+			locArStateId = api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID).getPosition().getCounty().getId().getId();
+		}
+		if (api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_BIZ_ID).getPosition().getCounty().getId() != null){
+			locBizStateId = api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_BIZ_ID).getPosition().getCounty().getId().getId();
+		}
+		if (api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_GI_ID).getPosition().getCounty().getId() != null){
+			locGiStateId = api.configAPI().getLocationFor(AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_GI_ID).getPosition().getCounty().getId().getId();
+		}
+		
+		//Locations for doctor and nurse visits are the same for each state so we only check this once
+		if (personalDataStateId.equals(locArStateId)
+		 || personalDataStateId.equals(locBizStateId)
+		 || personalDataStateId.equals(locGiStateId)) {
+		%>
+		<fmt:message key="medicalservice.solicitud.service.title" />
+		<%} else 
+		{%>
+			<fmt:message key="comun.solicitud.location.title" />
+		<%}
+	}%>
