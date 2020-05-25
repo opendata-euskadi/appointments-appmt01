@@ -6,8 +6,6 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 
-import aa14a.security.AA14SecurityAuthCtxBase;
-import aa14a.security.AA14SecurityAuthCtxBase.AA14UIUserScheduleData;
 import aa14f.model.config.business.AA14BusinessConfigForJustizia;
 import lombok.extern.slf4j.Slf4j;
 
@@ -70,7 +68,7 @@ public class AA14SecurityAuthCtxForJustizia
 //  
 /////////////////////////////////////////////////////////////////////////////////////////
 	public AA14SecurityAuthCtxForJustizia(final HttpServletRequest req) {
-				super("justizia","AA14A-FN-0001",		
+		super("justizia","AA14A-FN-0001",		
 			  // see aa14b.xlnets.properties.xml
 			  new Predicate<String>() {
 					@Override
