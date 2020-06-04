@@ -38,12 +38,21 @@
 		<dependency>
 			<groupId>appmt.appmt00.config</groupId>
 			<artifactId>appmt00APIConfigByEnv</artifactId>
-			<version>${appmt.config.byenv.version}</version> 
+			<version>${appmt.common.version}</version> 
 		</dependency>	
 		<dependency>
 			<groupId>appmt.appmt00.config</groupId>
 			<artifactId>appmt00COREConfigByEnv</artifactId>
-			<version>${appmt.config.byenv.version}</version>
+			<version>${appmt.common.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- APPMNT: UI                                -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>appmt.appmt00.ui</groupId>
+			<artifactId>appmt00UIClasses</artifactId>
+			<version>${appmt.common.version}</version>
 		</dependency>
 		
 		<!-- ///////////////////////////////////////// -->
@@ -55,15 +64,6 @@
 			<version>${revision}</version>
 		</dependency>
 		
-		<!-- ///////////////////////////////////////// -->
-		<!-- APPMNT: UI                                -->
-		<!-- ///////////////////////////////////////// -->
-		<dependency>
-			<groupId>appmt.appmt00.ui</groupId>
-			<artifactId>appmt00UIClasses</artifactId>
-			<version>${revision}</version>
-		</dependency>
-	
 		<!-- ///////////////////////////////////////// -->
 		<!-- APPMNT: WebApp common                     -->
 		<!-- ///////////////////////////////////////// -->

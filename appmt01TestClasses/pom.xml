@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>appmt.appmt00.core</groupId>
 			<artifactId>appmt00COREClasses</artifactId>
-			<version>${revision}</version>
+			<version>${appmt.common.version}</version>
 		</dependency>
 		
 		<!-- ///////////////////////////////////////// -->

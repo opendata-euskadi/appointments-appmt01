@@ -21,7 +21,6 @@
 		
 		<!-- Dependencies versions -->
 		<appmt.common.version>0.0.1-SNAPSHOT</appmt.common.version>
-		<appmt.config.byenv.version>0.0.1-SNAPSHOT</appmt.config.byenv.version>
 		<r01f.version>0.0.1-SNAPSHOT</r01f.version>
 		<plateaweb.version>0.0.1-SNAPSHOT</plateaweb.version>
 	</properties>
