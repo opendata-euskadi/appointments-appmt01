@@ -21,11 +21,14 @@
 			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.apellidos"/>:</td>
 			<td class="aa14a_valores" id="datoapellidos"></td>
 		</tr>
-		<tr>
+		<tr id="justizia_rr_profileRow" class="ocultar" >
 			<td class="aa14a_etiquetas"><fmt:message key="justizia.datospersonales.perfil"/>:</td>
 			<td class="aa14a_valores" id="datoperfil"></td>
 		</tr>
-		
+		<tr id="justizia_soj_requestorType" class="ocultar" >
+			<td class="aa14a_etiquetas"><fmt:message key="justizia.soj.solicitud.tipo"/>:</td>
+			<td class="aa14a_valores" id="datotiposolicitante"></td>
+		</tr>
 		<tr>
 			<td class="aa14a_etiquetas"><fmt:message key="comun.datospersonales.telefono"/>:</td>
 			<td class="aa14a_valores" id="datomovil"></td>

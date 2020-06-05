@@ -29,19 +29,19 @@ public class AA14ScheduleBusinessDataPrinterImpl
 			w.print("<td>");
 			AA14JustiziaActor profile = appointment.getBusinessDataAs(AA14BusinessDataForJustizia.class).getProfile();
 			switch (profile) {
-			case ABOGADO:
+			case PERFIL_ABOGADO:
 				w.println(lang == Language.SPANISH ? "Abogado/a" : "Agokatu");
 				break;
-			case PROCURADOR: 
+			case PERFIL_PROCURADOR: 
 				w.println(lang == Language.SPANISH ? "Procurador(a)" : "Prokuradore");
 				break;
-			case CIUDADANIA: 
+			case PERFIL_CIUDADANIA: 
 				w.println(lang == Language.SPANISH ? "Ciudadan&iacute;a" : "Hiritartasuna");
 				break;
-			case GRADUADO_SOCIAL: 
+			case PERFIL_GRADUADO: 
 				w.println(lang == Language.SPANISH ? "Graduado/a Social" : "Gizarte lizentziatua" );
 				break;
-			case OTRO: 
+			case PERFIL_OTRO: 
 				w.println(lang == Language.SPANISH ? "Otros" : "Beste batzuk");
 				break;
 			default: w.println("");

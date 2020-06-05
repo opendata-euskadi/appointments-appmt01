@@ -1,0 +1,15 @@
+<!-- VARIABLES IDIOMATICAS -->
+<script type="text/javascript">
+	// Errores de validación del formulario de solicitante
+	var subjectTypeMsgError = "<fmt:message key='kontsumobide.datospersonales.error.motivo'/>";
+	var subjectMsgError = "<fmt:message key='kontsumobide.datospersonales.error.tema'/>";
+	var locatorMsgError = "<fmt:message key='justizia.datospersonales.error.localizador'/>";
+	var msgLocatorRequiredError = "<fmt:message key='justizia.busqueda.error.localizador'/>";
+
+	// Literales para los datos de negocio de cada servicio
+	var COMPRA_HOJAS = "<fmt:message key='kontsumobide.datospersonales.motivo.compra'/>";
+	var RECLAMACION = "<fmt:message key='kontsumobide.datospersonales.motivo.reclamacion'/>";
+	var DOCUMENTACION = "<fmt:message key='kontsumobide.datospersonales.motivo.documentos'/>";
+	var OTROS = "<fmt:message key='kontsumobide.datospersonales.motivo.otros'/>";
+
+</script>

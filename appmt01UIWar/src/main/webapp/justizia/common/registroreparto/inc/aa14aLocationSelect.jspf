@@ -1,0 +1,42 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody> 
+			<tr>
+				<td>
+					<p><fmt:message key="justizia.registroReparto.service"/></p>
+					<div class="aa14-serviceLocations">
+						<p><input type="radio" name="locTh" value="ar"><fmt:message key="comun.araba"/></p>
+						<div id="loc_ar" class="aa14a_grupo_delegaciones">
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_AM_ID %>"><fmt:message key="justizia.registroReparto.am"/></div>
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_VI_ID %>"><fmt:message key="justizia.registroReparto.vi"/></div>
+						</div>
+					</div>
+					<div class="aa14-serviceLocations">
+						<p><input type="radio" name="locTh" value="biz"><fmt:message key="comun.bizkaia"/></p>
+						<div id="loc_biz"class="aa14a_grupo_delegaciones">
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_BAL_ID %>"><fmt:message key="justizia.registroReparto.bal"/></div>
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_BK_ID %>"><fmt:message key="justizia.registroReparto.bk"/></div>
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_BIL_ID %>"><fmt:message key="justizia.registroReparto.bil"/></div>
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_DUR_ID %>"><fmt:message key="justizia.registroReparto.dur"/></div>
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_GER_ID %>"><fmt:message key="justizia.registroReparto.ger"/></div>
+							<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_GTX_ID %>"><fmt:message key="justizia.registroReparto.gtx"/></div>
+						</div>
+					</div>
+					<div div class="aa14-serviceLocations">
+							<p><input type="radio" name="locTh" value="gi"><fmt:message key="comun.gipuzkoa"/></p>
+							<div id="loc_gi" class="aa14a_grupo_delegaciones">
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_AZ_ID %>"><fmt:message key="justizia.registroReparto.az"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_BER_ID %>"><fmt:message key="justizia.registroReparto.ber"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_DON_ID %>"><fmt:message key="justizia.registroReparto.don"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_EI_ID %>"><fmt:message key="justizia.registroReparto.eib"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_IRU_ID %>"><fmt:message key="justizia.registroReparto.iru"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_REPARTO_TO_ID %>"><fmt:message key="justizia.registroReparto.to"/></div>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

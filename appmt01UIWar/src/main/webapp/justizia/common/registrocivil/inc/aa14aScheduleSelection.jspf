@@ -1,0 +1,120 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="justizia.inicio.calendar.instrucciones"/></p>
+	
+	<%
+	System.out.println(" Favorite schedule: " + securityAuthCtx.getFavoriteSheduleId());
+	System.out.println(" Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	%>
+	
+	<div>
+		<div>	<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AM_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AM_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AM_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.am"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_VI_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_VI_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_VI_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.vi"/>
+			<% } %>
+		</div>
+		<div>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BAL_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BAL_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BAL_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.bal"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_INSC_BK_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_INSC_BK_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_INSC_BK_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.bk"/>&nbsp;&nbsp;<fmt:message key="justizia.registroCivil.bk.inscripciones"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BK_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BK_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BK_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.bk"/>&nbsp;&nbsp;<fmt:message key="justizia.registroCivil.bk.expedientes"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_CERT_FE_INS_BIL_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_CERT_FE_INS_BIL_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_CERT_FE_INS_BIL_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.bil"/>&nbsp;<fmt:message key="justizia.registroCivil.bil.certFeIns"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_MATRIMONIO_BIL_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_MATRIMONIO_BIL_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_MATRIMONIO_BIL_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.bil"/>&nbsp;<fmt:message key="justizia.registroCivil.bil.matrimonio"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BIL_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BIL_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BIL_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.bil"/>&nbsp;<fmt:message key="justizia.registroCivil.bil.expedientes"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DUR_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DUR_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DUR_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.dur"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GER_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GER_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GER_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.ger"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GTX_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GTX_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GTX_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.gtx"/>
+			<% } %>
+				
+		</div>
+		<div>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AZ_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AZ_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AZ_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.az"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BER_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BER_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BER_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.ber"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DON_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DON_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DON_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.don"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_EI_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_EI_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_EI_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.eib"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_IRU_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_IRU_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_IRU_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.iru"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_TO_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_TO_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_TO_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroCivil.to"/>
+			<% } %>
+			
+		</div>
+	</div>
+</div>

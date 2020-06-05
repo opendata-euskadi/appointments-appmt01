@@ -71,8 +71,8 @@ else { //Show all locations
 					<p><fmt:message key="medicalservice.doctorVisit"/></p>
 					<div class="aa14-serviceLocations">
 						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID %>"><fmt:message key="comun.araba"/></div>
-						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
-						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_AR_ID %>"><fmt:message key="comun.bizkaia"/></div>
+						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_BIZ_ID %>"><fmt:message key="comun.bizkaia"/></div>
+						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_DOCTOR_VISIT_GI_ID %>"><fmt:message key="comun.guipuzkoa"/></div>
 					</div>
 				</td>
 			</tr>
@@ -80,9 +80,9 @@ else { //Show all locations
 				<td>
 					<p><fmt:message key="medicalservice.nurseVisit"/></p>
 					<div class="aa14-serviceLocations">
-						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_NURSE_VISIT_AR_ID %>"><fmt:message key="comun.bizkaia"/></div>
 						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_NURSE_VISIT_AR_ID %>"><fmt:message key="comun.araba"/></div>
-						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_NURSE_VISIT_AR_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_NURSE_VISIT_BIZ_ID %>"><fmt:message key="comun.bizkaia"/></div>
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForMedicalService.LOC_NURSE_VISIT_GI_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
 					</div>
 				</td>
 			</tr>

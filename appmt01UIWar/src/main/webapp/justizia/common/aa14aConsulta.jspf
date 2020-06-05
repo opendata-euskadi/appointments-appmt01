@@ -4,7 +4,7 @@
 <html lang="${langCode}">
 <head>
 	<%@include file="/head/aa14aHead.comun.jspf"%>
-	<%@include file="/justizia/common/inc/aa14aHead.justicia.jspf"%>
+	<%@include file="/justizia/common/inc/aa14aHead.justizia.jspf"%>
 	
 	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
 	<%@include file="/head/aa14aHead.comun.scripts.jspf"%>
@@ -23,16 +23,31 @@
 	<%@include file="/justizia/common/inc/aa14aHeader.jspf"%>
 
 	<div class="aa14a_contenido">										
-		<!-- <h2 id="aa14a_titulo_pagina_imprimir" style="display: none;"><span class="fa fa-square"></span><fmt:message key="imprimir.titulo" /></h2>-->
 		<h2 id="aa14a_titulo_pagina_anular" style="display: none;"><span class="fa fa-square"></span><fmt:message key="anular.titulo" /></h2>
 		
 		<!-- appointment details -->
 		<%@include file="/justizia/common/inc/aa14aAppointmentDetails.jspf"%>
 			
 		<div id= "aa14a_capa_imprimir" class="ocultar">
-			<!--  Inicio -->
-			<div class="aa14a_btn_anterior_siguiente">
+			<!--  Inicio Registro reparto -->
+			<div id="btn_rr_salir" class="aa14a_btn_anterior_siguiente ocultar">
 				<a href="aa14aInit.jsp?lang=<%=langStr%>">
+					<div class="aa14a_boton aa14a_boton_right aa14a_boton_salir">
+						<p><span class="fa fa-home"></span><fmt:message key="comun.salir"/></p>
+					 </div>
+				</a>					
+			</div>
+			<!--  Inicio Registro civil -->
+			<div id="btn_rc_salir" class="aa14a_btn_anterior_siguiente ocultar">
+				<a href="aa14aRegistroCivilInit.jsp?lang=<%=langStr%>">
+					<div class="aa14a_boton aa14a_boton_right aa14a_boton_salir">
+						<p><span class="fa fa-home"></span><fmt:message key="comun.salir"/></p>
+					 </div>
+				</a>					
+			</div>
+			<!--  Inicio SOJ -->
+			<div id="btn_soj_salir" class="aa14a_btn_anterior_siguiente ocultar">
+				<a href="aa14aSOJInit.jsp?lang=<%=langStr%>">
 					<div class="aa14a_boton aa14a_boton_right aa14a_boton_salir">
 						<p><span class="fa fa-home"></span><fmt:message key="comun.salir"/></p>
 					 </div>

@@ -1,0 +1,9 @@
+
+	<div id="aa14a_personal_info_frm">
+		<div class="aa14a_formDataSection">
+			<p>
+				<input type="checkbox" name="terms" id="terms" class="aa14a_input"/>
+				<label for="terms"><span id="tcText"/></label>
+			<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+	</div>

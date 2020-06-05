@@ -1,0 +1,102 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="justizia.inicio.calendar.instrucciones"/></p>
+	
+	<%
+	System.out.println(" Favorite schedule: " + securityAuthCtx.getFavoriteSheduleId());
+	System.out.println(" Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	%>
+	
+	<div>
+		<div>	<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AM_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AM_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AM_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.am"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_VI_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_VI_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_VI_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.vi"/>
+			<% } %>
+		</div>
+		<div>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BAL_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BAL_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BAL_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.bal"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BK_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BK_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BK_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.bk"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BIL_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BIL_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BIL_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.bil"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DUR_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DUR_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DUR_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.dur"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GER_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GER_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GER_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.ger"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GTX_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GTX_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GTX_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.gtx"/>
+			<% } %>
+				
+		</div>
+		<div>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.az"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.ber"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.don"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EI_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EI_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EI_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.eib"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.iru"/>
+			<% } %>
+				<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_TO_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_TO_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_TO_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="justizia.registroReparto.to"/>
+			<% } %>
+			
+		</div>
+	</div>
+</div>

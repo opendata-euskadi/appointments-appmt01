@@ -6,8 +6,6 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
 
-import aa14a.security.AA14SecurityAuthCtxBase;
-import aa14a.security.AA14SecurityAuthCtxBase.AA14UIUserScheduleData;
 import aa14f.model.config.business.AA14BusinessConfigForMedicalService;
 
 /**

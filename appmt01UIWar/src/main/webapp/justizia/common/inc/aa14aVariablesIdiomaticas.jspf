@@ -1,19 +1,50 @@
 <!-- VARIABLES IDIOMATICAS -->
 <script type="text/javascript">
+	//Titulo para cada servicio
+	var tituloRegistroReparto = "<fmt:message key='justizia.registroReparto.titulo'/>";
+	var tituloRegistroCivil = "<fmt:message key='justizia.registroCivil.titulo'/>";
+	var tituloSOJ = "<fmt:message key='justizia.soj.titulo'/>";
+		
+	//Enlaces para la aceptación de terminos y condiciones
+	var enlaceTerminos = "https://www.euskadi.eus/clausulas-informativas/web01-sedepd/<%=langCode%>/transparencia/135500-capa1-<%=langCode%>.shtml";
+	var enlacePoliticas = "https://www.euskadi.eus/web01-aprat/<%=langCode%>/contenidos/informacion/rat/<%=langCode%>_def/adjuntos/1355_<%=langCode%>.html";
+	var msgTermsError = "<fmt:message key='justizia.datospersonales.terminos.error'/>";
 	
-// Errores de validación del formulario de solicitante
-var perfilMsgError = "<fmt:message key='justizia.datospersonales.error.perfil'/>";
-var locatorMsgError = "<fmt:message key='justizia.datospersonales.error.localizador'/>";
-var msgLocatorRequiredError = "<fmt:message key='justizia.busqueda.error.localizador'/>";
-
-// Errores de validación de fecha
-var maxNumberOfApointmetsExceededMsg = "<fmt:message key='justizia.solicitud.error.maximo.semana'/>";
-
-// Literales para el perfil
-var ABOGADO = "<fmt:message key='justizia.datospersonales.perfil.abogado'/>";
-var PROCURADOR = "<fmt:message key='justizia.datospersonales.perfil.procurador'/>";
-var CIUDADANIA = "<fmt:message key='justizia.datospersonales.perfil.ciudadania'/>";
-var GRADUADO_SOCIAL = "<fmt:message key='justizia.datospersonales.perfil.graduadoSocial'/>";
-var OTRO = "<fmt:message key='justizia.datospersonales.perfil.otro'/>";
-
+	// Errores de validación del formulario de solicitante
+	var perfilMsgError = "<fmt:message key='justizia.datospersonales.error.perfil'/>";
+	var locatorMsgError = "<fmt:message key='justizia.datospersonales.error.localizador'/>";
+	var msgLocatorRequiredError = "<fmt:message key='justizia.busqueda.error.localizador'/>";
+	var requestorTypeMsgError = "<fmt:message key='justizia.soj.solicitud.tipo.obligatorio'/>"
+	var lugarMsgError = "<fmt:message key='justizia.datospersonales.error.lugar'/>"
+	
+	// Errores de validación de fecha
+	var maxNumberOfApointmetsExceededMsg = "<fmt:message key='justizia.solicitud.error.maximo.semana'/>";
+	
+	// Literales para los datos de negocio de cada servicio
+	var PERFIL_ABOGADO = "<fmt:message key='justizia.datospersonales.perfil.abogado'/>";
+	var PERFIL_PROCURADOR = "<fmt:message key='justizia.datospersonales.perfil.procurador'/>";
+	var PERFIL_CIUDADANIA = "<fmt:message key='justizia.datospersonales.perfil.ciudadania'/>";
+	var PERFIL_GRADUADO = "<fmt:message key='justizia.datospersonales.perfil.graduadoSocial'/>";
+	var PERFIL_OTRO = "<fmt:message key='justizia.datospersonales.perfil.otro'/>";
+	
+	var INSCRIPCION_NACIMIENTO = "<fmt:message key='justizia.registroCivil.solicitud.tramite.insc.nacimiento'/>";
+	var INSCRIPCION_DEFUNCION = "<fmt:message key='justizia.registroCivil.solicitud.tramite.insc.defuncion'/>";
+	var MATRIMONIO_INFORMACION = "<fmt:message key='justizia.registroCivil.solicitud.tramite.informacion'/>";
+	var MATRIMONIO_DOCUMENTACION = "<fmt:message key='justizia.registroCivil.solicitud.tramite.documentacion'/>";
+	var MATRIMONIO_LIBRO_FAMILIA = "<fmt:message key='justizia.registroCivil.solicitud.tramite.matr.librofamilia'/>";
+	var MATRIMONIO_EXPEDIENTE = "<fmt:message key='justizia.registroCivil.solicitud.tramite.expedientes'/>";
+	var CERTIFICADO_NACIMIENTO = "<fmt:message key='justizia.registroCivil.solicitud.tramite.cert.nacimiento'/>";
+	var CERTIFICADO_DEFUNCION = "<fmt:message key='justizia.registroCivil.solicitud.tramite.cert.defuncion'/>";
+	var CERTIFICADO_MATRIMONIO = "<fmt:message key='justizia.registroCivil.solicitud.tramite.matrimonio'/>";
+	var CERTIFICADO_LIBRO_FAMILIA = "<fmt:message key='justizia.registroCivil.solicitud.tramite.cert.librofamilia'/>";
+	var EXPEDIENTE_CAMBIO = "<fmt:message key='justizia.registroCivil.solicitud.tramite.cambio'/>";
+	var EXPEDIENTE_TUTELA = "<fmt:message key='justizia.registroCivil.solicitud.tramite.tutela'/>";
+	var EXPEDIENTE_NACIONALIDAD = "<fmt:message key='justizia.registroCivil.solicitud.tramite.nacionalidad'/>";
+	var EXPEDIENTE_VECINDAD = "<fmt:message key='justizia.registroCivil.solicitud.tramite.vecindad'/>";
+	var EXPEDIENTE_RECTIFICACION = "<fmt:message key='justizia.registroCivil.solicitud.tramite.rectificacion'/>";
+	var FE_VIDA = "<fmt:message key='justizia.registroCivil.solicitud.tramite.fevida'/>";
+	var OTROS = "<fmt:message key='justizia.registroCivil.solicitud.tramite.otros'/>";
+	
+	var PROFESIONAL = "<fmt:message key='justizia.soj.solicitud.tipo.profesional'/>"
+	var CIUDADANO = "<fmt:message key='justizia.soj.solicitud.tipo.ciudadano'/>"
 </script>

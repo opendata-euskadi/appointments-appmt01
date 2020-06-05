@@ -83,6 +83,10 @@ function getNumberOfAdjacentSlots() {
 	return 1;
 }
 
+//Return an specific schedule to use for a location depending of customer data
+function forAScheduleId(){
+	return "";
+}
 function autoCompleteCustomerData() {
 	$("#search_customer")
     // don't navigate away from the field on tab when selecting an item

@@ -22,15 +22,15 @@ function paintCustomAppointmentDetails(appointment) {
 		&& appointment._contactInfo._phones) {
 		$("#datofijo").html("");
 		$("#datomovil").html("");
-		 for (var i in appointment._contactInfo._phones) {
-	            if (appointment._contactInfo._phones[i]._type=="NORMAL"
-	            	&& appointment._contactInfo._phones[i]._number){
-	            	$("#datofijo").html(appointment._contactInfo._phones[i]._number._id);
+		 for (var i in appointment._contactInfo._contactPhones) {
+	            if (appointment._contactInfo._contactPhones[i]._type=="NORMAL"
+	            	&& appointment._contactInfo._contactPhones[i]._number){
+	            	$("#datofijo").html(appointment._contactInfo._contactPhones[i]._number._id);
 	            	
 	            }
-	            if (appointment._contactInfo._phones[i]._type=="MOBILE"
-	            	&& appointment._contactInfo._phones[i]._number){
-	            	$("#datomovil").html(appointment._contactInfo._phones[i]._number._id);
+	            if (appointment._contactInfo._contactPhones[i]._type=="MOBILE"
+	            	&& appointment._contactInfo._contactPhones[i]._number){
+	            	$("#datomovil").html(appointment._contactInfo._contactPhones[i]._number._id);
 	            }
 	     }
 	}

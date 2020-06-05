@@ -1,0 +1,49 @@
+<div class='aa14a_calendar_location'>
+	<p class='aa14a_calendar_instructions'><fmt:message key="justizia.inicio.calendar.instrucciones"/></p>
+	
+	<%
+	System.out.println(" Favorite schedule: " + securityAuthCtx.getFavoriteSheduleId());
+	System.out.println(" Allowed schedules: " + securityAuthCtx.getAllowedScheduleIds());
+	%>
+	
+	<div>
+		<div>	<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_AR_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_AR_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_AR_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="kontsumobide.service.registry"/>&nbsp;<fmt:message key="comun.araba"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_BIZ_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_BIZ_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_BIZ_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="kontsumobide.service.registry"/>&nbsp;<fmt:message key="comun.bizkaia"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_GI_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_GI_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForKontsumoBide.SCH_REGISTRO_GI_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="kontsumobide.service.registry"/>&nbsp;<fmt:message key="comun.gipuzkoa"/>
+			<% } %>
+		</div>
+		<div>	<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_AR_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_AR_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_AR_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="kontsumobide.service.query"/>&nbsp;<fmt:message key="comun.araba"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_BIZ_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_BIZ_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_BIZ_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="kontsumobide.service.query"/>&nbsp;<fmt:message key="comun.bizkaia"/>
+			<% } %>
+			<% if (securityAuthCtx.isScheduleAllowed(AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_GI_ID)) { %>
+			<input name="schId" value="<%= AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_GI_ID %>" 
+				   type="radio" 
+				   <%= (securityAuthCtx.isFavoriteSchedule(AA14BusinessConfigForKontsumoBide.SCH_CONSULTA_GI_ID))? "checked=\"checked\"" : "" %>/>
+			<fmt:message key="kontsumobide.service.query"/>&nbsp;<fmt:message key="comun.gipuzkoa"/>
+			<% } %>
+		</div>
+	</div>
+</div>

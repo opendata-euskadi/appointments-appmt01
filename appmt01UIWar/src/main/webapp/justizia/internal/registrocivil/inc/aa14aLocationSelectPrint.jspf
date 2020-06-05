@@ -1,0 +1,50 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody> 
+			<tr>
+				<td>
+					<p><fmt:message key="justizia.registroCivil.service"/></p>
+					<div class="aa14-serviceLocations aa14a_grupo_delegaciones">
+							<p><input type="radio" name="locTh" value="ar"><fmt:message key="comun.araba"/></p>
+							<div id="loc_ar" class="aa14a_grupo_delegaciones">
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.am"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.vi"/></div>
+							</div>
+					</div>
+					<div class="aa14-serviceLocations aa14a_grupo_delegaciones">
+							<p><input type="radio" name="locTh" value="biz"><fmt:message key="comun.bizkaia"/></p>
+							<div id="loc_biz" class="aa14a_grupo_delegaciones">
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.bal"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.bk"/></div>
+								<div id="sch_bk" class="aa14a_grupo_delegaciones">
+									<div><input type="radio" name="schId" value="<%=AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_INSC_BK_ID %>"/><fmt:message key="justizia.registroCivil.bk.inscripciones"/></div>
+									<div><input type="radio" name="schId" value="<%=AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BK_ID %>"/><fmt:message key="justizia.registroCivil.bk.expedientes"/></div>
+								</div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.bil"/></div>
+								<div id="sch_bil" class="aa14a_grupo_delegaciones">
+									<div><input type="radio" name="schId" value="<%=AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_CERT_FE_INS_BIL_ID %>"/><fmt:message key="justizia.registroCivil.bil.certFeIns"/></div>
+									<div><input type="radio" name="schId" value="<%=AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_MATRIMONIO_BIL_ID %>"/><fmt:message key="justizia.registroCivil.bil.matrimonio"/></div>
+									<div><input type="radio" name="schId" value="<%=AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BIL_ID %>"/><fmt:message key="justizia.registroCivil.bil.expedientes"/></div>
+								</div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.dur"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.ger"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.gtx"/></div>
+							</div>
+					</div>
+					<div class="aa14-serviceLocations aa14a_grupo_delegaciones">
+							<p><input type="radio" name="locTh" value="gi"><fmt:message key="comun.gipuzkoa"/></p>
+							<div id="loc_gi" class="aa14a_grupo_delegaciones">
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.az"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.ber"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>" /><fmt:message key="justizia.registroCivil.don"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.eib"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.iru"/></div>
+								<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.to"/></div>
+							</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

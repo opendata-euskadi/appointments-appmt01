@@ -1,5 +1,5 @@
 <form id='aa14a_print_appointments_form' class='aa14a_print_appointments'
-	  action='/aa14aUIWar/AA14CalendarPrintServlet?R01HNoPortal=true'>
+	  action='/appmt01UIWar/AA14SchedulePrintServlet?R01HNoPortal=true'>
 	  
 	<input type="hidden" name="lang" value="<%=langCode%>" />
 	

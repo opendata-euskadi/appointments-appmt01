@@ -105,4 +105,7 @@ function getLastBloodDonationTextFromCodeValue(codeValue){
 	}
 	else return "";
 }
-
+//Return an specific schedule to use for a location depending of customer data
+function forAScheduleId(){
+	return "";
+}

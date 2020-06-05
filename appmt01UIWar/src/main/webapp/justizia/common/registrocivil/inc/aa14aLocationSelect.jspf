@@ -1,0 +1,419 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody> 
+			<tr>
+				<td>
+					<p><fmt:message key="justizia.registroCivil.service"/></p>
+					<div class="aa14-serviceLocations aa14a_grupo_delegaciones">
+							<p><input type="radio" name="locTh" value="ar"><fmt:message key="comun.araba"/></p>
+							<div id="loc_ar" class="aa14a_grupo_delegaciones">
+								<div><input type="radio" name="locId" value="am"/><fmt:message key="justizia.registroCivil.am"/></div>
+								<div id="tram_am" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_am" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AM_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="vi" d/><fmt:message key="justizia.registroCivil.vi"/></div>
+								<div id="tram_vi" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_vi" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_VI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+							</div>
+					</div>
+					<div class="aa14-serviceLocations aa14a_grupo_delegaciones">
+							<p><input type="radio" name="locTh" value="biz"><fmt:message key="comun.bizkaia"/></p>
+							<div id="loc_biz" class="aa14a_grupo_delegaciones">
+							<div><input type="radio" name="locId" value="bal"/><fmt:message key="justizia.registroCivil.bal"/></div>
+								<div id="tram_bal" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_bal" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BAL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="bk" d/><fmt:message key="justizia.registroCivil.bk"/></div>
+								<div id="tram_bk" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_bk" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BK_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="bil"/><fmt:message key="justizia.registroCivil.bil"/></div>
+								<div id="tram_bil" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_bil" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BIL_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="dur" d/><fmt:message key="justizia.registroCivil.dur"/></div>
+								<div id="tram_dur" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_dur" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DUR_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="ger"/><fmt:message key="justizia.registroCivil.ger"/></div>
+								<div id="tram_ger" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_ger" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="gtx" d/><fmt:message key="justizia.registroCivil.gtx"/></div>
+								<div id="tram_gtx" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_gtx" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_GTX_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+							</div>
+					</div>
+					<div class="aa14-serviceLocations aa14a_grupo_delegaciones">
+							<p><input type="radio" name="locTh" value="gi"><fmt:message key="comun.gipuzkoa"/></p>
+							<div id="loc_gi" class="aa14a_grupo_delegaciones">
+								<div><input type="radio" name="locId" value="az"/><fmt:message key="justizia.registroCivil.az"/></div>
+								<div id="tram_az" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_az" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_AZ_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div><div><input type="radio" name="locId" value="ber"/><fmt:message key="justizia.registroCivil.ber"/></div>
+								<div id="tram_ber" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_ber" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_BER_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="don" /><fmt:message key="justizia.registroCivil.don"/></div>
+								<div id="tram_don" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_don" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_DON_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="eib"/><fmt:message key="justizia.registroCivil.eib"/></div>
+								<div id="tram_eib" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_eib" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_EI_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								<div><input type="radio" name="locId" value="iru"/><fmt:message key="justizia.registroCivil.iru"/></div>
+								<div id="tram_iru" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_iru" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_IRU_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+								
+								<div><input type="radio" name="locId" value="to"/><fmt:message key="justizia.registroCivil.to"/></div>
+								<div id="tram_to" class="aa14a_grupo_delegaciones">
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.inscripcion"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="1_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="2_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.inscripcion.defuncion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.matrimonio"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="3_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.informacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="4_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.documentacion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="5_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.librofamilia"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="6_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.matrimonio.expedientes"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.certificado"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="7_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.nacimiento"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="8_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.defuncion"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="9_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.matrimonio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="10_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.certificado.librofamilia"/></div>
+									</div>
+										<div class="aa14a_grupo_delegaciones"><fmt:message key="justizia.registroCivil.solicitud.expediente"/>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="11_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.cambio"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="12_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.tutela"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="13_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.nacionalidad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="14_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.vecindad"/></div>
+										<div class="aa14a_grupo_delegaciones"><input type="radio" id="15_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.expediente.rectificacion"/></div>
+									</div>
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="16_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.fevida"/></div>		
+									<div class="aa14a_grupo_delegaciones"><input type="radio" id="17_to" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_REGISTRO_CIVIL_TO_ID %>"/><fmt:message key="justizia.registroCivil.solicitud.otros"/></div>
+								</div>
+							</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

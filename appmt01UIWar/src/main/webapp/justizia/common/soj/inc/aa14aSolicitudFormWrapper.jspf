@@ -1,0 +1,7 @@
+<div class="aa14a_bloque ocultar">
+
+	<!-- personal info -->		
+	<%@include file="/justizia/common/soj/inc/aa14aSolicitudForm.jspf" %>
+	<!-- t&c -->		
+	<%@include file="/justizia/common/inc/aa14aTerminosCondicionesForm.jspf" %>
+</div>

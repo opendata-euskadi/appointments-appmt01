@@ -4,17 +4,25 @@
 		<tr><th colspan="2"><fmt:message key="comun.lugarcita"/></th></tr>
 	</thead>	
 	<tbody>
-	<tr class="aa14a_linea_tabla_datos">
+	<tr id="justizia_rr_judicial_party" class="aa14a_linea_tabla_datos ocultar">
 		<td class="aa14a_etiquetas"><fmt:message key="justizia.location.judicialParty" />: </td>
 		<td class="aa14a_valores" aa14val="aa14a_justizia_loc_judicial_party"></td>
 	</tr>	
-	<tr class="aa14a_linea_tabla_datos">
+	<tr id="justizia_rr_service" class="aa14a_linea_tabla_datos ocultar">
 		<td class="aa14a_etiquetas"><fmt:message key="comun.location.lblservicio" />: </td>
 		<td class="aa14a_valores" aa14val="aa14a_justizia_service"></td>
 	</tr>
-	<tr class="aa14a_linea_tabla_datos">
+	<tr id="justizia_soj_service" class="aa14a_linea_tabla_datos ocultar">
+		<td class="aa14a_etiquetas"><fmt:message key="comun.location.lblservicio" />: </td>
+		<td class="aa14a_valores" aa14val="aa14a_justizia_service"></td>
+	</tr>
+	<tr id="justizia_rr_procedureRow" class="aa14a_linea_tabla_datos ocultar">
 		<td class="aa14a_etiquetas"><fmt:message key="comun.location.lbltramite" />:</td>
 		<td class="aa14a_valores" aa14val="aa14a_service_proc"></td>
+	</tr>
+	<tr id="justizia_rc_procedureRow" class="aa14a_linea_tabla_datos ocultar">
+		<td class="aa14a_etiquetas"><fmt:message key="comun.location.lbltramite" />:</td>
+		<td class="aa14a_valores" aa14val="aa14a_rc_proc">></td>
 	</tr>
 	<tr class="aa14a_linea_tabla_datos">
 		<td class="aa14a_etiquetas"><fmt:message key="comun.location.lbldireccion" />:</td>

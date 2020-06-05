@@ -1,0 +1,15 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody> 
+			<tr>
+				<td>
+					<p><fmt:message key="justizia.soj.service"/></p>
+					<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_SOJ_BIL_ID %>"/><fmt:message key="comun.bilbao"/></div>
+					<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_SOJ_DON_ID %>"/><fmt:message key="comun.donostia"/></div>				
+					<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForJustizia.LOC_JUSTIZIA_SOJ_VI_ID %>"/><fmt:message key="comun.gasteiz"/></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -93,7 +93,7 @@ function generateLocator() {
 	console.log("[Locator]: getting locator for nif=" + nif + " email=" + email);
 	var success = false;
 	$.ajax({
-		  url		: '/' + appmt01UIWar + '/AA14ControllerServlet?R01HNoPortal=true',
+		  url		: '/' + appmtContextRoot + '/AA14ControllerServlet?R01HNoPortal=true',
 		  data		: "op=GENERATE_PERSON_LOCATOR&personId=" + nif + "&email=" + email,
 		  type		: "get",
 		  async		: false,	// IMPORTANT!! the success info is needed SYNCHRONOUSLY!
@@ -175,7 +175,7 @@ function validateMaxNumberOfAppointments() {
 	console.log("> check number of appointments of personId=" + personId + " at locId=" + locId + " " +
 				  "at year=" + year + " week=" + weekOfYear);
 	$.ajax({
-		  url		: '/' + appmt01UIWar + '/AA14ControllerServlet?R01HNoPortal=true',
+		  url		: '/' + appmtContextRoot + '/AA14ControllerServlet?R01HNoPortal=true',
 		  data		: "op=VALIDATE_MAX_WEEK_PERSON_APPOINTMENTS&locId=" + locId + 
 		  													  "&personId=" + personId + 
 		  													  "&year=" + year + "&weekOfYear=" + weekOfYear + 

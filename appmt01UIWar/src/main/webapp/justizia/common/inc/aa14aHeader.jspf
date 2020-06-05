@@ -1,5 +1,5 @@
 	<header class="aa14a_cabecera">
-		<h1><fmt:message key="justizia.titulo"/></h1>
+		<h1><span id="justizia_titulo"/></h1>
 	</header>
 	
 	<!-- Server error dialog -->

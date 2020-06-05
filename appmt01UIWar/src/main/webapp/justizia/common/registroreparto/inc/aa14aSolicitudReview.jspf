@@ -1,0 +1,9 @@
+<div class="aa14a_bloque ocultar">	
+	
+	<%@include file="/justizia/common/registroreparto/inc/aa14aAppointmentDetails.jspf"%>
+	
+	<div class="aa14a_solicitud_bloqueAzul">
+		<p><fmt:message key="comun.solicitud.confirmar.informacion"/></p>
+		<p><fmt:message key="comun.solicitud.confirmar.informacion2"/></p>							
+	</div>
+</div>

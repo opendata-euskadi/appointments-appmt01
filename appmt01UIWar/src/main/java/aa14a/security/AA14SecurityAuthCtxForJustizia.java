@@ -43,22 +43,21 @@ import lombok.extern.slf4j.Slf4j;
  *           		| 03 | Agentes Zuzenean AR
  *           		| 04 | Agentes Zuzenean GI
  * =================|====|========================================================
- * Justizia     	| 21 | Admin Justizia Escritos de inicio
- * 			     	| 22 | Justizia Escritos de inicio Bilbao
- * 			     	| 23 | Justizia Escritos de inicio Getxo
- * 			     	| 24 | Justizia Escritos de inicio Gernika-Lumo
- * 			     	| 25 | Justizia Escritos de inicio Durango
- * 			     	| 26 | Justizia Escritos de inicio Balmaseda
- * 			     	| 27 | Justizia Escritos de inicio Barakaldo
- * 			     	| 28 | Justizia Escritos de inicio Amurrio
- * 			     	| 29 | Justizia Escritos de inicio Vitoria-Gazteiz
- * 			     	| 30 | Justizia Escritos de inicio Azpeitia
- * 			     	| 31 | Justizia Escritos de inicio Bergara
- * 			     	| 32 | Justizia Escritos de inicio Irun
- * 			     	| 33 | Justizia Escritos de inicio Tolosa
- * 			     	| 34 | Justizia Escritos de inicio Donostia/San Sebasti�n
- * 
- * 
+ * Justizia     	| 21 | Admin Justizia Escritos de inicio / Registro Civil
+ * 			     	| 22 | Justizia Escritos de inicio / Registro Civil Bilbao
+ * 			     	| 23 | Justizia Escritos de inicio / Registro Civil Getxo
+ * 			     	| 24 | Justizia Escritos de inicio / Registro Civil Gernika-Lumo
+ * 			     	| 25 | Justizia Escritos de inicio / Registro Civil Durango
+ * 			     	| 26 | Justizia Escritos de inicio / Registro Civil Balmaseda
+ * 			     	| 27 | Justizia Escritos de inicio / Registro Civil Barakaldo
+ * 			     	| 28 | Justizia Escritos de inicio / Registro Civil Amurrio
+ * 			     	| 29 | Justizia Escritos de inicio / Registro Civil Vitoria-Gazteiz
+ * 			     	| 30 | Justizia Escritos de inicio / Registro Civil Azpeitia
+ * 			     	| 31 | Justizia Escritos de inicio / Registro Civil Bergara
+ * 			     	| 32 | Justizia Escritos de inicio / Registro Civil Irun
+ * 			     	| 33 | Justizia Escritos de inicio / Registro Civil Tolosa
+ * 			     	| 34 | Justizia Escritos de inicio / Registro Civil Eibar
+ * 			     	| 35 | Justizia Escritos de inicio / Registro Civil Donostia/San Sebastian
  * 
  */
 @Slf4j
@@ -68,7 +67,7 @@ public class AA14SecurityAuthCtxForJustizia
 //  
 /////////////////////////////////////////////////////////////////////////////////////////
 	public AA14SecurityAuthCtxForJustizia(final HttpServletRequest req) {
-		super("justizia","AA14A-FN-0001",		
+				super("justizia","AA14A-FN-0001",		
 			  // see aa14b.xlnets.properties.xml
 			  new Predicate<String>() {
 					@Override
@@ -86,7 +85,7 @@ public class AA14SecurityAuthCtxForJustizia
 							|| profileId.equals("AA14A-PF-0031")		// Bergara
 							|| profileId.equals("AA14A-PF-0033")		// Eibar
 							|| profileId.equals("AA14A-PF-0034")		// Tolosa
-							|| profileId.equals("AA14A-PF-0035"));		// Donostia/San Sebasti�n
+							|| profileId.equals("AA14A-PF-0035"));		// Donostia/San Sebastian
 					}
 			  },
 			  new Function<String,AA14UIUserScheduleData>() {
@@ -108,65 +107,106 @@ public class AA14SecurityAuthCtxForJustizia
 																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID,
 																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID,
 																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID,
-																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EIB_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EI_ID,
 																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_TO_ID,
-																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID));	
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_CERT_FE_INS_BIL_ID,
+																  					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_MATRIMONIO_BIL_ID,
+																  					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BIL_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GTX_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GER_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DUR_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BAL_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_INSC_BK_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BK_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AM_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_VI_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AZ_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BER_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_IRU_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_EI_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_TO_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DON_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_SOJ_VI_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_SOJ_BIL_ID,
+																					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_SOJ_DON_ID));	
 							} 
 							else if (profileId.equals("AA14A-PF-0022")) { //Bilbao
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BIL_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BIL_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BIL_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_CERT_FE_INS_BIL_ID,
+																  					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_MATRIMONIO_BIL_ID,
+																  					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BIL_ID,
+																  					 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_SOJ_BIL_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0023")) { //Getxo
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GTX_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GTX_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GTX_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GTX_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0024")) {//Gernika-Lumo
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GER_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GER_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_GER_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_GER_ID));
+								
 							}
 							else if (profileId.equals("AA14A-PF-0025")) {//Durango
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DUR_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DUR_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DUR_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DUR_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0026")) {//Balmaseda
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BAL_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BAL_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BAL_ID,
+																		  	 		 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BAL_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0027")) { //Barakaldo
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BK_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BK_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BK_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_INSC_BK_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_EXP_BK_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0028")) { //Amurrio
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AM_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AM_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AM_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AM_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0029")) { //Vitoria-Gazteiz
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_VI_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_VI_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_VI_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_VI_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_SOJ_VI_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0030")) {//Azpeitia
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_AZ_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_AZ_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0031")) {//Bergara
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_BER_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_BER_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0032")) {//Irun
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_IRU_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_IRU_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0033")) {//Eibar
-								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EIB_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EIB_ID));
+								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EI_ID,													
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_EI_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_EI_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0034")) {//Tolosa
-								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID));
+								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_TO_ID,													
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_TO_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_TO_ID));
 							}
 							else if (profileId.equals("AA14A-PF-0035")) {//Donostia/San Sebasti�n
 								return new AA14UIUserScheduleData(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID,													
-																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID));
+																  Lists.newArrayList(AA14BusinessConfigForJustizia.SCH_JUSTIZIA_REGISTRO_REPARTO_DON_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_RC_GENERAL_DON_ID,
+																		  			 AA14BusinessConfigForJustizia.SCH_JUSTIZIA_SOJ_DON_ID));
 							}
 							else {
 								log.error("Unknown schedule id for profileId=" + profileId);

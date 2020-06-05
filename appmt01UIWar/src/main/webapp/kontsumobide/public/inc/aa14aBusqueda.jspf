@@ -1,0 +1,121 @@
+<%@include file="/kontsumobide/common/inc/aa14aGlobal.jspf"%>
+
+<!DOCTYPE html>
+<html lang="${langCode}">
+<head>
+	<%@include file="/head/aa14aHead.comun.jspf"%>
+	<%@include file="/kontsumobide/common/inc/aa14aHead.kontsumobide.jspf"%>
+	
+	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
+	
+	<%@include file="/head/aa14aHead.comun.scripts.jspf"%>	
+	
+	<script src="/appcont/aa14aAppointments/scripts/aa14a-appointmentSearch.js"></script>
+		
+	<script src="/appcont/aa14aAppointments/scripts/kontsumobide/aa14a-search.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/kontsumobide/aa14a-appointmentDetails.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/kontsumobide/aa14a-form.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/aa14a-validations.js"></script>
+	<script src="/appcont/aa14aAppointments/scripts/aa14a-appointmentDateTimeSelectionCalendar.js"></script>
+</head>
+
+<body>
+	<script>
+		var orgId = '<%= AA14BusinessConfigForKontsumoBide.ORG_ID %>'
+	</script>
+	<%@include file="/aa14aJSDynamicVars.jspf"%>
+	<%@include file="/kontsumobide/common/inc/aa14aVariablesIdiomaticas.jspf"%>
+	
+	<%@include file="/kontsumobide/common/inc/aa14aHeader.jspf"%>
+	
+	<!-- the pop up to enter the [nif] + [email] to ask the system to send an email with the locator -->
+	<div id="aa14_locator_request_dialog"  class='ocultar'>
+		<p><%@include file="/aa14aRemindPersonLocator.jspf"%></p>
+	</div>
+	
+	<!-- Search form -->
+	<div class="aa14a_contenido" id="aa14_appointment_search">										
+		<h2 id="aa14a_titulo_pagina"><span class="fa fa-square"></span><fmt:message key="busqueda.titulo" /></h2>
+		<section>									
+			<div class="aa14a_titulo_consulta">
+				<h3><fmt:message key="busqueda.informacion" /></h3>
+			</div>
+			
+			<!-- Errores de validación -->
+			<div id="aa14a_errores_busqueda"></div>
+			
+			<!-- Formulario de búsqueda -->
+			<form action="" method="get" name="formBuscarCitas" id="formBuscarCitas" class='aa14a_form aa14aclearfix'>
+				<input type=hidden id="op" name="op">
+				<input type=hidden id="lang" name="lang">
+				
+				<p class="aa14a_comentario"><span class="fa fa-commenting"></span><fmt:message key="kontsumobide.busqueda.texto" /></p>
+				
+				<!-- Service selection -->
+				
+					<%@include file="/kontsumobide/common/inc/aa14aLocationSelect.jspf"%>
+				<div id="servicio" class="aa14a_detalle">
+					<label for="locator"><fmt:message key="comun.datospersonales.localizador" />:</label>
+					<input class="aa14a_input" type="text" name="locator" id="locator"  placeholder="<fmt:message key='justizia.busqueda.localizador.placeholder' />">
+					
+					<!-- button -->
+					<div class="aa14a_btn_anterior_siguiente">	
+						<a><div id="aa14a_realizar_busqueda" class="aa14a_boton">
+							<p><span class="fa fa-search"></span><fmt:message key="comun.buscar" /></p>
+					   		</div>
+						</a>
+						<a><div id="aa14a_recordar_localizador" class="aa14a_boton aa14a_boton_salir">
+							<p><span class="fa fa-lightbulb-o"></span><fmt:message key="comun.datospersonales.localizador.recordar" /></p>
+					   		</div>
+						</a>
+					</div>
+					<!-- remind locator -->
+					<div class="aa14a_btn_anterior_siguiente">
+						
+					</div>
+				</div>						
+				
+				
+			</form>
+			
+			<!-- Resultados de búsqueda -->
+			<div id="aa14a_search_results" class="aa14a_tabla ocultar">
+				<table class="table-bordered table-striped table-condensed cf">
+					<thead class="cf"><tr>
+						<th class='aa14_srchItemSrvc'><fmt:message key='comun.location.lblservicio'/></th>
+						<th class='aa14_srchItemName'><fmt:message key='comun.datospersonales.nombre'/></th>
+						<th class='aa14_srchItemSurname'><fmt:message key='comun.datospersonales.apellidos'/></th>
+						<th class='aa14_srchItemID'><fmt:message key='comun.datospersonales.nif'/></th>
+						<th class='aa14_srchItemDate'><fmt:message key='comun.fechahora'/></th>
+						<th class="aa14_srchItemEdit aa14a_th-center"><fmt:message key='comun.modificar'/></th>
+					</tr></thead>
+					<tbody id="aa14a_search_results_items">
+					</tbody>
+				</table>
+			</div>
+		</section>		
+													
+		<div class="aa14a_btn_anterior_siguiente">
+			<a href="aa14aInit.jsp?lang=<%=langStr%>">
+				<div class="aa14a_boton aa14a_boton_right aa14a_boton_salir">
+					<p><span class="fa fa-home"></span><fmt:message key="comun.salir" /></p>
+				</div>
+			</a>					
+		</div>	
+	</div>
+	
+	<!-- Editar cita (cambiar hora) -->
+	<div id='aa14a_editAppointment_dialog'>
+		<%@include file="/kontsumobide/common/inc/aa14aAppointmentEditWrapper.jspf"%>
+	</div>
+	
+	<!-- Release slot dialogs -->
+	<div id="aa14_booked_slot_release_dialog">
+		<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><fmt:message key="anular.msg"/></p>
+	</div>
+	<div id="aa14_booked_slot_release_response_dialog">
+		<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><fmt:message key="anular.confirmacion"/></p>
+	</div>
+	
+</body>
+</html>

@@ -5,8 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 
-import aa14a.security.AA14SecurityAuthCtxBase;
-import aa14a.security.AA14SecurityAuthCtxBase.AA14UIUserScheduleData;
 import aa14f.model.config.business.AA14BusinessConfigForTrafikoa;
 import r01f.util.types.collections.Lists;
 

@@ -1,0 +1,27 @@
+<div class="aa14a_servicio">
+	<table class="aa14a_tabla_datos_servicio">
+		<thead><tr><th><fmt:message key="comun.location.lblservicio"/></th></tr></thead>	
+		<tbody> 
+			<tr>
+				<td>
+					<p><fmt:message key="kontsumobide.service.registry"/></p>
+					<div class="aa14-serviceLocations">
+						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForKontsumoBide.LOC_REGISTRO_AR_ID %>"><fmt:message key="comun.araba"/></div>
+						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForKontsumoBide.LOC_REGISTRO_BIZ_ID %>"><fmt:message key="comun.bizkaia"/></div>
+						<div ><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForKontsumoBide.LOC_REGISTRO_GI_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p><fmt:message key="kontsumobide.service.query"/></p>
+					<div class="aa14-serviceLocations">
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForKontsumoBide.LOC_CONSULTA_AR_ID %>"><fmt:message key="comun.araba"/></div>
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForKontsumoBide.LOC_CONSULTA_BIZ_ID %>"><fmt:message key="comun.bizkaia"/></div>
+						<div><input type="radio" name="serviceLocId" value="<%= AA14BusinessConfigForKontsumoBide.LOC_CONSULTA_GI_ID %>"><fmt:message key="comun.gipuzkoa"/></div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

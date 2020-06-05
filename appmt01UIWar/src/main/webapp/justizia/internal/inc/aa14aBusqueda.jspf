@@ -4,7 +4,7 @@
 <html lang="${langCode}">
 <head>
 	<%@include file="/head/aa14aHead.comun.jspf"%>
-	<%@include file="/justizia/common/inc/aa14aHead.justicia.jspf"%>
+	<%@include file="/justizia/common/inc/aa14aHead.justizia.jspf"%>
 	
 	<%@include file="/head/aa14aHead.comun.styles.jspf"%>
 	
@@ -23,7 +23,9 @@
 	<%@include file="/aa14aJSDynamicVars.jspf"%>
 	<%@include file="/justizia/common/inc/aa14aVariablesIdiomaticas.jspf"%>
 	
-	<%@include file="/justizia/common/inc/aa14aHeader.jspf"%>
+	<header class="aa14a_cabecera">
+		<h1><fmt:message key='justizia.registroReparto.titulo'/></h1>
+	</header>
 	
 	<div class="aa14a_contenido" id="aa14_appointment_search">										
 		<h2 id="aa14a_titulo_pagina"><span class="fa fa-square"></span><fmt:message key="busqueda.titulo" /></h2>
@@ -39,16 +41,12 @@
 			<form action="" method="get" name="formBuscarCitas" id="formBuscarCitas" class='aa14a_form aa14aclearfix'>
 				<input type=hidden id="op" name="op">
 				<input type=hidden id="lang" name="lang">
-				<input type=hidden id="serviceId" name="serviceId" value="<%= AA14BusinessConfigForJustizia.SERVICE_ID %>">
+				<input type=hidden id="serviceId" name="serviceId" value="<%= AA14BusinessConfigForJustizia.REGISTRO_REPARTO_SRV_ID %>">
 				
 				<p class="aa14a_comentario"><span class="fa fa-commenting"></span><fmt:message key="justizia.busqueda.texto" /></p>
 				
 				<label for="nif"><fmt:message key="comun.datospersonales.nif" />:</label>
 				<input class="aa14a_input" type="text" name="nif" id="nif"  placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />">
-				<% if (!hasScheduleAccess) { %>
-				
-				
-				<% }%>	
 				<%@include file="/aa14aSearchCommonForm.jspf"%>
 				
 			</form>

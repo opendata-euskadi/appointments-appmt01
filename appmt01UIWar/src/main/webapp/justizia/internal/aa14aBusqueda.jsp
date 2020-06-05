@@ -1,1 +1,1 @@
-<%@include file="/justizia/internal/inc/aa14aBusqueda.jspf"%>
+<%@include file="/justizia/internal/registroreparto/inc/aa14aBusqueda.jspf"%>

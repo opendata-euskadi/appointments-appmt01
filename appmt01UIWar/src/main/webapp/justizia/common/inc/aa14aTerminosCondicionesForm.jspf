@@ -1,0 +1,14 @@
+
+	<div id="aa14a_personal_info_frm">
+		<div class="aa14a_formDataSection">
+			<p>
+				<input type="checkbox" name="terms" id="terms" class="aa14a_input"/>
+				<span ><fmt:message key='justizia.solicitud.acuerdo'>
+								   	<fmt:param value="<a id='terminos'>"/>
+								   	<fmt:param value='</a>'/>
+								   	<fmt:param value="<a id='politica'>"/>
+								   	<fmt:param value='</a>'/>
+								   	
+								   </fmt:message></span>
+			</p>
+	</div>

@@ -1,0 +1,18 @@
+<section class="aa14a_resumen_cita">
+	
+	<!-- fecha / hora -->
+	<p class="aa14a_datos-cita" colspan="2" id="citaSelec"></p>
+	
+	<div id="aa14a_requestedDate" class="ocultar">
+		<!-- fecha / hora solicitud -->
+		<p class="aa14a_etiquetas"><fmt:message key="comun.requestedAt"/>: <span class="aa14a_valores" id="appointmentRequestedAt"></span></p>
+		</p>
+	</div>	
+	<!-- datos -->						
+	<div id="aa14a_appointmentDetail-left" class="aa14a_detalle">
+		<%@include file="/justizia/common/soj/inc/aa14aLocationDetails.jspf"%>
+	</div>
+	<div id="aa14a_appointmentDetail-right" class="aa14a_detalle"> 
+		<%@include file="/justizia/common/soj/inc/aa14aCustomerDetails.jspf"%>
+	</div>
+</section>

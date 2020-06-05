@@ -41,3 +41,8 @@ function generateLocator() {
 function getNumberOfAdjacentSlots() {
 	return 1;
 }
+
+//Return an specific schedule to use for a location depending of customer data
+function forAScheduleId(){
+	return "";
+}

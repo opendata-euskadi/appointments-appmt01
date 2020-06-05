@@ -1,0 +1,67 @@
+	<div id="aa14a_errores_datospersonales"></div>
+	<div id="aa14_locator_response_dialog"  class='ocultar'>
+		<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="locatorMessage"></span></p>
+	</div>
+	<p class="aa14a_warning">
+		<span class="fa fa-asterisk"></span>
+		<fmt:message key="comun.solicitud.datospersonales.mandatory" />
+	</p>
+	<div id="aa14a_personal_info_frm">
+		<!-- appointment requestor data -->
+		<p class='aa14a_formData_requestor'><fmt:message key='comun.form.data.title.requestor' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="nif"><fmt:message key="comun.datospersonales.nif" />: </label>
+				<input type="text" name="nif" id="nif" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />" />
+				<input type="text" name="nifTxt" id="nifTxt" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.nif.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+				
+				<input type="text" name="locator" id="locator" class="aa14a_input"/>
+			</p>
+			<p>
+				<label for="nombre"><fmt:message key="comun.datospersonales.nombre" />: </label>
+				<input name="nombre" id="nombre" class="aa14a_input" type="text" 
+					   placeholder="<fmt:message key='comun.datospersonales.nombre.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+				<label for="apellidos"><fmt:message key="comun.datospersonales.apellidos" />: </label>
+				<input type="text" name="apellidos" id="apellidos" class="aa14a_input" 
+					   placeholder="<fmt:message key='comun.datospersonales.apell.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+			<p>
+			
+			<!-- https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box-->
+				<label for="perfil"><fmt:message key="justizia.datospersonales.perfil" />: </label>
+				<select name="justizia.perfil" id="perfil" class="aa14a_input">
+					   <option value="" disabled selected><fmt:message key='justizia.datospersonales.perfil.placeholder' /></option>
+					   <option value="1" ><fmt:message key='justizia.datospersonales.perfil.abogado' /></option>
+					   <option value="2" ><fmt:message key='justizia.datospersonales.perfil.procurador' /></option>
+					   <option value="3" ><fmt:message key='justizia.datospersonales.perfil.graduadoSocial' /></option>
+					   <option value="4" ><fmt:message key='justizia.datospersonales.perfil.ciudadania' /></option>
+					   <option value="5" ><fmt:message key='justizia.datospersonales.perfil.otro' /></option>	
+				</select>		      
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>
+		</div>
+		
+		<!-- contact info -->
+		<p class='aa14a_formData_contactInfo'><fmt:message key='comun.form.data.title.contact' /></p>
+		<div class="aa14a_formDataSection">
+			<p>
+				<label for="movil"><fmt:message key="comun.datospersonales.telefono" />: </label>
+				<input type="tel" name="movil" id="movil" class="aa14a_input"  
+				       placeholder="<fmt:message key='justizia.datospersonales.movil.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>
+			</p>					
+			<p>
+				<label for="email"><fmt:message key="comun.datospersonales.correo" />: </label>
+				<input type="email" name="email" id="email" class="aa14a_input" 
+					   placeholder="<fmt:message key='justizia.datospersonales.correo.placeholder' />" />
+				<span class="fa fa-asterisk" title="<fmt:message key='comun.solicitud.datospersonales.mandatory' />"></span>	   
+			</p>
+		</div>
+	</div>
