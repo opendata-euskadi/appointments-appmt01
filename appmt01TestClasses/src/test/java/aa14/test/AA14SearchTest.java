@@ -6,8 +6,8 @@ import aa14f.client.api.AA14ClientAPI;
 import aa14f.model.config.AA14OrgDivision;
 import aa14f.model.config.AA14OrgDivisionService;
 import aa14f.model.config.AA14Organization;
-import aa14f.model.search.AA14SearchFilter;
-import aa14f.model.search.AA14SearchResultItem;
+import aa14f.model.search.AA14SearchFilterForOrganizationalEntity;
+import aa14f.model.search.AA14SearchResultItemForOrganizationalEntity;
 import r01f.locale.Language;
 import r01f.model.search.SearchResults;
 
@@ -35,19 +35,19 @@ public class AA14SearchTest {
 		// create a search filter for every entity
 		try {
 			@SuppressWarnings("unchecked")
-			AA14SearchFilter filter = new AA14SearchFilter(AA14Organization.class,
+			AA14SearchFilterForOrganizationalEntity filter = new AA14SearchFilterForOrganizationalEntity(AA14Organization.class,
 														   AA14OrgDivision.class,
 														   AA14OrgDivisionService.class);
 			filter.belongingTo(_org.getOid());
 			filter.withText("Agent").in(Language.SPANISH);
-			SearchResults<AA14SearchFilter,
-						  AA14SearchResultItem> searchResults = _api.searchAPI()
+			SearchResults<AA14SearchFilterForOrganizationalEntity,
+						  AA14SearchResultItemForOrganizationalEntity> searchResults = _api.searchAPI()
 						  											.search(filter)
 						  											.firstPage();
 				Assert.assertTrue(searchResults != null && searchResults.getTotalItemsCount() > 0);
 				System.out.println("--->Found: " + searchResults.getTotalItemsCount() + " items searching by " + filter.toCriteriaString());
 
-				for (AA14SearchResultItem item : searchResults.getPageItems()) {
+				for (AA14SearchResultItemForOrganizationalEntity item : searchResults.getPageItems()) {
 					// ...
 				}
 		} catch(Throwable th) {
