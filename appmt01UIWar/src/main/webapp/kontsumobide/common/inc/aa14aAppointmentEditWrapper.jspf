@@ -11,7 +11,6 @@
 <!-- Customer details -->
 <div id="aa14a_customer_details" class="aa14a_bloque ocultar">
 <%@include file="/kontsumobide/common/inc/aa14aSolicitudForm.jspf"%>
-<input type="radio" name="serviceLocId" id="appointmentServiceType" class="ocultar">
 </div>
 
 <!-- Common appointment edit -->
